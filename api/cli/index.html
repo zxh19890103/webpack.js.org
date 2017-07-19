@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>命令行接口(CLI)</title>
+    <meta name="description" content="webpack 是一个模块打包器。它的主要目标是将 JavaScript 文件打包在一起，打包后的文件用于在浏览器中使用，但它也能够胜任转换(transform)、打包(bundle)或包裹(package)任何资源(resource or asset)。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2B3A42">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+
+    <!--<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600|Source+Sans+Pro:200,400,400i,500" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+    
+      <link href="/57c75467cbad4616b42c.css" rel="stylesheet">
+    
+
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?39edd8e76884f07399be96cd422c9af3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+  </head>
+  <body>
+    <div id="site" class="site"><div class="interactive" id="components/notification-bar/notification-bar.jsx" data-props="{}"><div class="notification-bar "></div></div><div class="interactive" id="components/navigation/navigation.jsx" data-props="{&quot;sections&quot;:[{&quot;url&quot;:&quot;get-started&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x6982;&#x5FF5;&quot;,&quot;url&quot;:&quot;concepts&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x8D77;&#x70B9;(Entry Points)&quot;,&quot;url&quot;:&quot;concepts/entry-points&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;concepts/output&quot;},{&quot;title&quot;:&quot;Loader&quot;,&quot;url&quot;:&quot;concepts/loaders&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;concepts/plugins&quot;},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;(Configuration)&quot;,&quot;url&quot;:&quot;concepts/configuration&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Modules)&quot;,&quot;url&quot;:&quot;concepts/modules&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x89E3;&#x6790;(Module Resolution)&quot;,&quot;url&quot;:&quot;concepts/module-resolution&quot;},{&quot;title&quot;:&quot;&#x4F9D;&#x8D56;&#x56FE;(Dependency Graph)&quot;,&quot;url&quot;:&quot;concepts/dependency-graph&quot;},{&quot;title&quot;:&quot;Manifest&quot;,&quot;url&quot;:&quot;concepts/manifest&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;concepts/targets&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&quot;,&quot;url&quot;:&quot;concepts/hot-module-replacement&quot;}]},{&quot;title&quot;:&quot;&#x6307;&#x5357;&quot;,&quot;url&quot;:&quot;guides&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;url&quot;:&quot;guides/installation&quot;},{&quot;title&quot;:&quot;&#x8D77;&#x6B65;&quot;,&quot;url&quot;:&quot;guides/getting-started&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x8D44;&#x6E90;&quot;,&quot;url&quot;:&quot;guides/asset-management&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x8F93;&#x51FA;&quot;,&quot;url&quot;:&quot;guides/output-management&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;guides/development&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;&quot;,&quot;url&quot;:&quot;guides/hot-module-replacement&quot;},{&quot;title&quot;:&quot;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6784;&#x5EFA;&quot;,&quot;url&quot;:&quot;guides/production&quot;},{&quot;title&quot;:&quot;Tree Shaking&quot;,&quot;url&quot;:&quot;guides/tree-shaking&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB;&quot;,&quot;url&quot;:&quot;guides/code-splitting&quot;},{&quot;title&quot;:&quot;Lazy Loading&quot;,&quot;url&quot;:&quot;guides/lazy-loading&quot;},{&quot;title&quot;:&quot;&#x7F13;&#x5B58;&quot;,&quot;url&quot;:&quot;guides/caching&quot;},{&quot;title&quot;:&quot;&#x521B;&#x5EFA; Library&quot;,&quot;url&quot;:&quot;guides/author-libraries&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&quot;,&quot;url&quot;:&quot;guides/environment-variables&quot;},{&quot;title&quot;:&quot;Shimming&quot;,&quot;url&quot;:&quot;guides/shimming&quot;},{&quot;title&quot;:&quot;TypeScript&quot;,&quot;url&quot;:&quot;guides/typescript&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1; - Vagrant&quot;,&quot;url&quot;:&quot;guides/development-vagrant&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x4F9D;&#x8D56;&quot;,&quot;url&quot;:&quot;guides/dependency-management&quot;},{&quot;title&quot;:&quot;&#x4ECE; v1 &#x8FC1;&#x79FB;&#x5230; v2&quot;,&quot;url&quot;:&quot;guides/migrating&quot;},{&quot;title&quot;:&quot;Public Path&quot;,&quot;url&quot;:&quot;guides/public-path&quot;},{&quot;title&quot;:&quot;&#x96C6;&#x6210;(Integrations)&quot;,&quot;url&quot;:&quot;guides/integrations&quot;}]},{&quot;title&quot;:&quot;&#x8D77;&#x6B65;&#x914D;&#x5957;&#x5DE5;&#x5177;&quot;,&quot;url&quot;:&quot;guides/starter-kits&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;development&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF1F;(How to write a plugin?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-plugin&quot;},{&quot;title&quot;:&quot;&#x6709;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x6A21;&#x5F0F;(Useful Plugin Patterns)&quot;,&quot;url&quot;:&quot;development/plugin-patterns&quot;},{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A; loader&#xFF1F;(How to write a loader?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-loader&quot;},{&quot;title&quot;:&quot;webpack &#x5408;&#x5E76;&#x3001;&#x6807;&#x8BB0;&#x548C;&#x53D1;&#x5E03;&#x6D41;&#x7A0B;(webpack merge, tag and release process)&quot;,&quot;url&quot;:&quot;development/release-process&quot;}]},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;url&quot;:&quot;configuration&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x914D;&#x7F6E;(Configuration Languages)&quot;,&quot;url&quot;:&quot;configuration/configuration-languages&quot;},{&quot;title&quot;:&quot;&#x591A;&#x79CD;&#x914D;&#x7F6E;&#x7C7B;&#x578B;&quot;,&quot;url&quot;:&quot;configuration/configuration-types&quot;},{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x548C;&#x4E0A;&#x4E0B;&#x6587;(Entry and Context)&quot;,&quot;url&quot;:&quot;configuration/entry-context&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;configuration/output&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Module)&quot;,&quot;url&quot;:&quot;configuration/module&quot;},{&quot;title&quot;:&quot;&#x89E3;&#x6790;(Resolve)&quot;,&quot;url&quot;:&quot;configuration/resolve&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;configuration/plugins&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x4E2D; Server(DevServer)&quot;,&quot;url&quot;:&quot;configuration/dev-server&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x8F85;&#x52A9;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;(Devtool)&quot;,&quot;url&quot;:&quot;configuration/devtool&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;configuration/target&quot;},{&quot;title&quot;:&quot;Watch &#x548C; WatchOptions&quot;,&quot;url&quot;:&quot;configuration/watch&quot;},{&quot;title&quot;:&quot;&#x5916;&#x90E8;&#x6269;&#x5C55;(Externals)&quot;,&quot;url&quot;:&quot;configuration/externals&quot;},{&quot;title&quot;:&quot;Node&quot;,&quot;url&quot;:&quot;configuration/node&quot;},{&quot;title&quot;:&quot;&#x6027;&#x80FD;(Performance)&quot;,&quot;url&quot;:&quot;configuration/performance&quot;},{&quot;title&quot;:&quot;&#x7EDF;&#x8BA1;(Stats)&quot;,&quot;url&quot;:&quot;configuration/stats&quot;},{&quot;title&quot;:&quot;&#x5176;&#x5B83;&#x9009;&#x9879;(Other Options)&quot;,&quot;url&quot;:&quot;configuration/other-options&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(CLI)&quot;,&quot;url&quot;:&quot;api/cli&quot;},{&quot;title&quot;:&quot;Module API - Methods&quot;,&quot;url&quot;:&quot;api/module-methods&quot;},{&quot;title&quot;:&quot;Module API - Variables&quot;,&quot;url&quot;:&quot;api/module-variables&quot;},{&quot;title&quot;:&quot;Node.js API&quot;,&quot;url&quot;:&quot;api/node&quot;},{&quot;title&quot;:&quot;Loader API&quot;,&quot;url&quot;:&quot;api/loaders&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&quot;,&quot;url&quot;:&quot;api/hot-module-replacement&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api/plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Tapable&quot;,&quot;url&quot;:&quot;api/plugins/tapable&quot;},{&quot;title&quot;:&quot;&#x7F16;&#x8BD1;&#x5668;(Compiler)&quot;,&quot;url&quot;:&quot;api/plugins/compiler&quot;},{&quot;title&quot;:&quot;Compilation&quot;,&quot;url&quot;:&quot;api/plugins/compilation&quot;},{&quot;title&quot;:&quot;Context/Normal Module Factories&quot;,&quot;url&quot;:&quot;api/plugins/module-factories&quot;},{&quot;title&quot;:&quot;Resolver&quot;,&quot;url&quot;:&quot;api/plugins/resolver&quot;},{&quot;title&quot;:&quot;Dependency&quot;,&quot;url&quot;:&quot;api/plugins/dependency&quot;},{&quot;title&quot;:&quot;Parser&quot;,&quot;url&quot;:&quot;api/plugins/parser&quot;},{&quot;title&quot;:&quot;Templates&quot;,&quot;url&quot;:&quot;api/plugins/template&quot;}]},{&quot;url&quot;:&quot;pluginsapi&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;Loaders&quot;,&quot;url&quot;:&quot;loaders&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;babel-loader&quot;,&quot;url&quot;:&quot;loaders/babel-loader&quot;},{&quot;title&quot;:&quot;bundle-loader&quot;,&quot;url&quot;:&quot;loaders/bundle-loader&quot;},{&quot;title&quot;:&quot;cache-loader&quot;,&quot;url&quot;:&quot;loaders/cache-loader&quot;},{&quot;title&quot;:&quot;coffee-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-loader&quot;},{&quot;title&quot;:&quot;coffee-redux-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-redux-loader&quot;},{&quot;title&quot;:&quot;coverjs-loader&quot;,&quot;url&quot;:&quot;loaders/coverjs-loader&quot;},{&quot;title&quot;:&quot;css-loader&quot;,&quot;url&quot;:&quot;loaders/css-loader&quot;},{&quot;title&quot;:&quot;dynamic-css-loader&quot;,&quot;url&quot;:&quot;loaders/dynamic-css-loader&quot;},{&quot;title&quot;:&quot;exports-loader&quot;,&quot;url&quot;:&quot;loaders/exports-loader&quot;},{&quot;title&quot;:&quot;expose-loader&quot;,&quot;url&quot;:&quot;loaders/expose-loader&quot;},{&quot;title&quot;:&quot;file-loader&quot;,&quot;url&quot;:&quot;loaders/file-loader&quot;},{&quot;title&quot;:&quot;gzip-loader&quot;,&quot;url&quot;:&quot;loaders/gzip-loader&quot;},{&quot;title&quot;:&quot;html-loader&quot;,&quot;url&quot;:&quot;loaders/html-loader&quot;},{&quot;title&quot;:&quot;i18n-loader&quot;,&quot;url&quot;:&quot;loaders/i18n-loader&quot;},{&quot;title&quot;:&quot;imports-loader&quot;,&quot;url&quot;:&quot;loaders/imports-loader&quot;},{&quot;title&quot;:&quot;istanbul-instrumenter-loader&quot;,&quot;url&quot;:&quot;loaders/istanbul-instrumenter-loader&quot;},{&quot;title&quot;:&quot;jshint-loader&quot;,&quot;url&quot;:&quot;loaders/jshint-loader&quot;},{&quot;title&quot;:&quot;json-loader&quot;,&quot;url&quot;:&quot;loaders/json-loader&quot;},{&quot;title&quot;:&quot;json5-loader&quot;,&quot;url&quot;:&quot;loaders/json5-loader&quot;},{&quot;title&quot;:&quot;less-loader&quot;,&quot;url&quot;:&quot;loaders/less-loader&quot;},{&quot;title&quot;:&quot;mocha-loader&quot;,&quot;url&quot;:&quot;loaders/mocha-loader&quot;},{&quot;title&quot;:&quot;multi-loader&quot;,&quot;url&quot;:&quot;loaders/multi-loader&quot;},{&quot;title&quot;:&quot;node-loader&quot;,&quot;url&quot;:&quot;loaders/node-loader&quot;},{&quot;title&quot;:&quot;null-loader&quot;,&quot;url&quot;:&quot;loaders/null-loader&quot;},{&quot;title&quot;:&quot;raw-loader&quot;,&quot;url&quot;:&quot;loaders/raw-loader&quot;},{&quot;title&quot;:&quot;react-proxy-loader&quot;,&quot;url&quot;:&quot;loaders/react-proxy-loader&quot;},{&quot;title&quot;:&quot;restyle-loader&quot;,&quot;url&quot;:&quot;loaders/restyle-loader&quot;},{&quot;title&quot;:&quot;sass-loader&quot;,&quot;url&quot;:&quot;loaders/sass-loader&quot;},{&quot;title&quot;:&quot;script-loader&quot;,&quot;url&quot;:&quot;loaders/script-loader&quot;},{&quot;title&quot;:&quot;source-map-loader&quot;,&quot;url&quot;:&quot;loaders/source-map-loader&quot;},{&quot;title&quot;:&quot;style-loader&quot;,&quot;url&quot;:&quot;loaders/style-loader&quot;},{&quot;title&quot;:&quot;svg-inline-loader&quot;,&quot;url&quot;:&quot;loaders/svg-inline-loader&quot;},{&quot;title&quot;:&quot;thread-loader&quot;,&quot;url&quot;:&quot;loaders/thread-loader&quot;},{&quot;title&quot;:&quot;transform-loader&quot;,&quot;url&quot;:&quot;loaders/transform-loader&quot;},{&quot;title&quot;:&quot;url-loader&quot;,&quot;url&quot;:&quot;loaders/url-loader&quot;},{&quot;title&quot;:&quot;val-loader&quot;,&quot;url&quot;:&quot;loaders/val-loader&quot;},{&quot;title&quot;:&quot;worker-loader&quot;,&quot;url&quot;:&quot;loaders/worker-loader&quot;},{&quot;title&quot;:&quot;yaml-frontmatter-loader&quot;,&quot;url&quot;:&quot;loaders/yaml-frontmatter-loader&quot;}]},{&quot;title&quot;:&quot;Plugins&quot;,&quot;url&quot;:&quot;plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;MinChunkSizePlugin&quot;,&quot;url&quot;:&quot;plugins/min-chunk-size-plugin&quot;},{&quot;title&quot;:&quot;BabiliWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/babili-webpack-plugin&quot;},{&quot;title&quot;:&quot;BannerPlugin&quot;,&quot;url&quot;:&quot;plugins/banner-plugin&quot;},{&quot;title&quot;:&quot;CommonsChunkPlugin&quot;,&quot;url&quot;:&quot;plugins/commons-chunk-plugin&quot;},{&quot;title&quot;:&quot;ComponentWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/component-webpack-plugin&quot;},{&quot;title&quot;:&quot;CompressionWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/compression-webpack-plugin&quot;},{&quot;title&quot;:&quot;ContextReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/context-replacement-plugin&quot;},{&quot;title&quot;:&quot;DefinePlugin&quot;,&quot;url&quot;:&quot;plugins/define-plugin&quot;},{&quot;title&quot;:&quot;DllPlugin&quot;,&quot;url&quot;:&quot;plugins/dll-plugin&quot;},{&quot;title&quot;:&quot;EnvironmentPlugin&quot;,&quot;url&quot;:&quot;plugins/environment-plugin&quot;},{&quot;title&quot;:&quot;ExtractTextWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/extract-text-webpack-plugin&quot;},{&quot;title&quot;:&quot;HotModuleReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/hot-module-replacement-plugin&quot;},{&quot;title&quot;:&quot;HtmlWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/html-webpack-plugin&quot;},{&quot;title&quot;:&quot;I18nWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/i18n-webpack-plugin&quot;},{&quot;title&quot;:&quot;IgnorePlugin&quot;,&quot;url&quot;:&quot;plugins/ignore-plugin&quot;},{&quot;title&quot;:&quot;LimitChunkCountPlugin&quot;,&quot;url&quot;:&quot;plugins/limit-chunk-count-plugin&quot;},{&quot;title&quot;:&quot;LoaderOptionsPlugin&quot;,&quot;url&quot;:&quot;plugins/loader-options-plugin&quot;},{&quot;title&quot;:&quot;NoEmitOnErrorsPlugin&quot;,&quot;url&quot;:&quot;plugins/no-emit-on-errors-plugin&quot;},{&quot;title&quot;:&quot;NormalModuleReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/normal-module-replacement-plugin&quot;},{&quot;title&quot;:&quot;NpmInstallWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/npm-install-webpack-plugin&quot;},{&quot;title&quot;:&quot;ProvidePlugin&quot;,&quot;url&quot;:&quot;plugins/provide-plugin&quot;},{&quot;title&quot;:&quot;SourceMapDevToolPlugin&quot;,&quot;url&quot;:&quot;plugins/source-map-dev-tool-plugin&quot;},{&quot;title&quot;:&quot;UglifyjsWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/uglifyjs-webpack-plugin&quot;},{&quot;title&quot;:&quot;ZopfliWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/zopfli-webpack-plugin&quot;}]},{&quot;title&quot;:&quot;&#x652F;&#x6301;&quot;,&quot;url&quot;:&quot;support&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/feedback&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/moneyDistribution&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;organization&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x5176;&#x4ED6;&quot;,&quot;url&quot;:&quot;/&quot;,&quot;pages&quot;:[]}],&quot;pageUrl&quot;:&quot;api/cli&quot;}"><header class="navigation"></header></div><div class="interactive" id="components/sidebar-mobile/sidebar-mobile.jsx" data-props="{&quot;sections&quot;:[{&quot;url&quot;:&quot;get-started&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x6982;&#x5FF5;&quot;,&quot;url&quot;:&quot;concepts&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x8D77;&#x70B9;(Entry Points)&quot;,&quot;url&quot;:&quot;concepts/entry-points&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;concepts/output&quot;},{&quot;title&quot;:&quot;Loader&quot;,&quot;url&quot;:&quot;concepts/loaders&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;concepts/plugins&quot;},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;(Configuration)&quot;,&quot;url&quot;:&quot;concepts/configuration&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Modules)&quot;,&quot;url&quot;:&quot;concepts/modules&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x89E3;&#x6790;(Module Resolution)&quot;,&quot;url&quot;:&quot;concepts/module-resolution&quot;},{&quot;title&quot;:&quot;&#x4F9D;&#x8D56;&#x56FE;(Dependency Graph)&quot;,&quot;url&quot;:&quot;concepts/dependency-graph&quot;},{&quot;title&quot;:&quot;Manifest&quot;,&quot;url&quot;:&quot;concepts/manifest&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;concepts/targets&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&quot;,&quot;url&quot;:&quot;concepts/hot-module-replacement&quot;}]},{&quot;title&quot;:&quot;&#x6307;&#x5357;&quot;,&quot;url&quot;:&quot;guides&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;&quot;,&quot;url&quot;:&quot;guides/installation&quot;},{&quot;title&quot;:&quot;&#x8D77;&#x6B65;&quot;,&quot;url&quot;:&quot;guides/getting-started&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x8D44;&#x6E90;&quot;,&quot;url&quot;:&quot;guides/asset-management&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x8F93;&#x51FA;&quot;,&quot;url&quot;:&quot;guides/output-management&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;guides/development&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;&quot;,&quot;url&quot;:&quot;guides/hot-module-replacement&quot;},{&quot;title&quot;:&quot;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6784;&#x5EFA;&quot;,&quot;url&quot;:&quot;guides/production&quot;},{&quot;title&quot;:&quot;Tree Shaking&quot;,&quot;url&quot;:&quot;guides/tree-shaking&quot;},{&quot;title&quot;:&quot;&#x4EE3;&#x7801;&#x5206;&#x79BB;&quot;,&quot;url&quot;:&quot;guides/code-splitting&quot;},{&quot;title&quot;:&quot;Lazy Loading&quot;,&quot;url&quot;:&quot;guides/lazy-loading&quot;},{&quot;title&quot;:&quot;&#x7F13;&#x5B58;&quot;,&quot;url&quot;:&quot;guides/caching&quot;},{&quot;title&quot;:&quot;&#x521B;&#x5EFA; Library&quot;,&quot;url&quot;:&quot;guides/author-libraries&quot;},{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#x53D8;&#x91CF;&quot;,&quot;url&quot;:&quot;guides/environment-variables&quot;},{&quot;title&quot;:&quot;Shimming&quot;,&quot;url&quot;:&quot;guides/shimming&quot;},{&quot;title&quot;:&quot;TypeScript&quot;,&quot;url&quot;:&quot;guides/typescript&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1; - Vagrant&quot;,&quot;url&quot;:&quot;guides/development-vagrant&quot;},{&quot;title&quot;:&quot;&#x7BA1;&#x7406;&#x4F9D;&#x8D56;&quot;,&quot;url&quot;:&quot;guides/dependency-management&quot;},{&quot;title&quot;:&quot;&#x4ECE; v1 &#x8FC1;&#x79FB;&#x5230; v2&quot;,&quot;url&quot;:&quot;guides/migrating&quot;},{&quot;title&quot;:&quot;Public Path&quot;,&quot;url&quot;:&quot;guides/public-path&quot;},{&quot;title&quot;:&quot;&#x96C6;&#x6210;(Integrations)&quot;,&quot;url&quot;:&quot;guides/integrations&quot;}]},{&quot;title&quot;:&quot;&#x8D77;&#x6B65;&#x914D;&#x5957;&#x5DE5;&#x5177;&quot;,&quot;url&quot;:&quot;guides/starter-kits&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&quot;,&quot;url&quot;:&quot;development&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x63D2;&#x4EF6;&#xFF1F;(How to write a plugin?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-plugin&quot;},{&quot;title&quot;:&quot;&#x6709;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x6A21;&#x5F0F;(Useful Plugin Patterns)&quot;,&quot;url&quot;:&quot;development/plugin-patterns&quot;},{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x4E00;&#x4E2A; loader&#xFF1F;(How to write a loader?)&quot;,&quot;url&quot;:&quot;development/how-to-write-a-loader&quot;},{&quot;title&quot;:&quot;webpack &#x5408;&#x5E76;&#x3001;&#x6807;&#x8BB0;&#x548C;&#x53D1;&#x5E03;&#x6D41;&#x7A0B;(webpack merge, tag and release process)&quot;,&quot;url&quot;:&quot;development/release-process&quot;}]},{&quot;title&quot;:&quot;&#x914D;&#x7F6E;&quot;,&quot;url&quot;:&quot;configuration&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x914D;&#x7F6E;(Configuration Languages)&quot;,&quot;url&quot;:&quot;configuration/configuration-languages&quot;},{&quot;title&quot;:&quot;&#x591A;&#x79CD;&#x914D;&#x7F6E;&#x7C7B;&#x578B;&quot;,&quot;url&quot;:&quot;configuration/configuration-types&quot;},{&quot;title&quot;:&quot;&#x5165;&#x53E3;&#x548C;&#x4E0A;&#x4E0B;&#x6587;(Entry and Context)&quot;,&quot;url&quot;:&quot;configuration/entry-context&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;(Output)&quot;,&quot;url&quot;:&quot;configuration/output&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;(Module)&quot;,&quot;url&quot;:&quot;configuration/module&quot;},{&quot;title&quot;:&quot;&#x89E3;&#x6790;(Resolve)&quot;,&quot;url&quot;:&quot;configuration/resolve&quot;},{&quot;title&quot;:&quot;&#x63D2;&#x4EF6;(Plugins)&quot;,&quot;url&quot;:&quot;configuration/plugins&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x4E2D; Server(DevServer)&quot;,&quot;url&quot;:&quot;configuration/dev-server&quot;},{&quot;title&quot;:&quot;&#x5F00;&#x53D1;&#x8F85;&#x52A9;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;(Devtool)&quot;,&quot;url&quot;:&quot;configuration/devtool&quot;},{&quot;title&quot;:&quot;&#x6784;&#x5EFA;&#x76EE;&#x6807;(Targets)&quot;,&quot;url&quot;:&quot;configuration/target&quot;},{&quot;title&quot;:&quot;Watch &#x548C; WatchOptions&quot;,&quot;url&quot;:&quot;configuration/watch&quot;},{&quot;title&quot;:&quot;&#x5916;&#x90E8;&#x6269;&#x5C55;(Externals)&quot;,&quot;url&quot;:&quot;configuration/externals&quot;},{&quot;title&quot;:&quot;Node&quot;,&quot;url&quot;:&quot;configuration/node&quot;},{&quot;title&quot;:&quot;&#x6027;&#x80FD;(Performance)&quot;,&quot;url&quot;:&quot;configuration/performance&quot;},{&quot;title&quot;:&quot;&#x7EDF;&#x8BA1;(Stats)&quot;,&quot;url&quot;:&quot;configuration/stats&quot;},{&quot;title&quot;:&quot;&#x5176;&#x5B83;&#x9009;&#x9879;(Other Options)&quot;,&quot;url&quot;:&quot;configuration/other-options&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(CLI)&quot;,&quot;url&quot;:&quot;api/cli&quot;},{&quot;title&quot;:&quot;Module API - Methods&quot;,&quot;url&quot;:&quot;api/module-methods&quot;},{&quot;title&quot;:&quot;Module API - Variables&quot;,&quot;url&quot;:&quot;api/module-variables&quot;},{&quot;title&quot;:&quot;Node.js API&quot;,&quot;url&quot;:&quot;api/node&quot;},{&quot;title&quot;:&quot;Loader API&quot;,&quot;url&quot;:&quot;api/loaders&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&quot;,&quot;url&quot;:&quot;api/hot-module-replacement&quot;}]},{&quot;title&quot;:&quot;API&quot;,&quot;url&quot;:&quot;api/plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;Tapable&quot;,&quot;url&quot;:&quot;api/plugins/tapable&quot;},{&quot;title&quot;:&quot;&#x7F16;&#x8BD1;&#x5668;(Compiler)&quot;,&quot;url&quot;:&quot;api/plugins/compiler&quot;},{&quot;title&quot;:&quot;Compilation&quot;,&quot;url&quot;:&quot;api/plugins/compilation&quot;},{&quot;title&quot;:&quot;Context/Normal Module Factories&quot;,&quot;url&quot;:&quot;api/plugins/module-factories&quot;},{&quot;title&quot;:&quot;Resolver&quot;,&quot;url&quot;:&quot;api/plugins/resolver&quot;},{&quot;title&quot;:&quot;Dependency&quot;,&quot;url&quot;:&quot;api/plugins/dependency&quot;},{&quot;title&quot;:&quot;Parser&quot;,&quot;url&quot;:&quot;api/plugins/parser&quot;},{&quot;title&quot;:&quot;Templates&quot;,&quot;url&quot;:&quot;api/plugins/template&quot;}]},{&quot;url&quot;:&quot;pluginsapi&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;Loaders&quot;,&quot;url&quot;:&quot;loaders&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;babel-loader&quot;,&quot;url&quot;:&quot;loaders/babel-loader&quot;},{&quot;title&quot;:&quot;bundle-loader&quot;,&quot;url&quot;:&quot;loaders/bundle-loader&quot;},{&quot;title&quot;:&quot;cache-loader&quot;,&quot;url&quot;:&quot;loaders/cache-loader&quot;},{&quot;title&quot;:&quot;coffee-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-loader&quot;},{&quot;title&quot;:&quot;coffee-redux-loader&quot;,&quot;url&quot;:&quot;loaders/coffee-redux-loader&quot;},{&quot;title&quot;:&quot;coverjs-loader&quot;,&quot;url&quot;:&quot;loaders/coverjs-loader&quot;},{&quot;title&quot;:&quot;css-loader&quot;,&quot;url&quot;:&quot;loaders/css-loader&quot;},{&quot;title&quot;:&quot;dynamic-css-loader&quot;,&quot;url&quot;:&quot;loaders/dynamic-css-loader&quot;},{&quot;title&quot;:&quot;exports-loader&quot;,&quot;url&quot;:&quot;loaders/exports-loader&quot;},{&quot;title&quot;:&quot;expose-loader&quot;,&quot;url&quot;:&quot;loaders/expose-loader&quot;},{&quot;title&quot;:&quot;file-loader&quot;,&quot;url&quot;:&quot;loaders/file-loader&quot;},{&quot;title&quot;:&quot;gzip-loader&quot;,&quot;url&quot;:&quot;loaders/gzip-loader&quot;},{&quot;title&quot;:&quot;html-loader&quot;,&quot;url&quot;:&quot;loaders/html-loader&quot;},{&quot;title&quot;:&quot;i18n-loader&quot;,&quot;url&quot;:&quot;loaders/i18n-loader&quot;},{&quot;title&quot;:&quot;imports-loader&quot;,&quot;url&quot;:&quot;loaders/imports-loader&quot;},{&quot;title&quot;:&quot;istanbul-instrumenter-loader&quot;,&quot;url&quot;:&quot;loaders/istanbul-instrumenter-loader&quot;},{&quot;title&quot;:&quot;jshint-loader&quot;,&quot;url&quot;:&quot;loaders/jshint-loader&quot;},{&quot;title&quot;:&quot;json-loader&quot;,&quot;url&quot;:&quot;loaders/json-loader&quot;},{&quot;title&quot;:&quot;json5-loader&quot;,&quot;url&quot;:&quot;loaders/json5-loader&quot;},{&quot;title&quot;:&quot;less-loader&quot;,&quot;url&quot;:&quot;loaders/less-loader&quot;},{&quot;title&quot;:&quot;mocha-loader&quot;,&quot;url&quot;:&quot;loaders/mocha-loader&quot;},{&quot;title&quot;:&quot;multi-loader&quot;,&quot;url&quot;:&quot;loaders/multi-loader&quot;},{&quot;title&quot;:&quot;node-loader&quot;,&quot;url&quot;:&quot;loaders/node-loader&quot;},{&quot;title&quot;:&quot;null-loader&quot;,&quot;url&quot;:&quot;loaders/null-loader&quot;},{&quot;title&quot;:&quot;raw-loader&quot;,&quot;url&quot;:&quot;loaders/raw-loader&quot;},{&quot;title&quot;:&quot;react-proxy-loader&quot;,&quot;url&quot;:&quot;loaders/react-proxy-loader&quot;},{&quot;title&quot;:&quot;restyle-loader&quot;,&quot;url&quot;:&quot;loaders/restyle-loader&quot;},{&quot;title&quot;:&quot;sass-loader&quot;,&quot;url&quot;:&quot;loaders/sass-loader&quot;},{&quot;title&quot;:&quot;script-loader&quot;,&quot;url&quot;:&quot;loaders/script-loader&quot;},{&quot;title&quot;:&quot;source-map-loader&quot;,&quot;url&quot;:&quot;loaders/source-map-loader&quot;},{&quot;title&quot;:&quot;style-loader&quot;,&quot;url&quot;:&quot;loaders/style-loader&quot;},{&quot;title&quot;:&quot;svg-inline-loader&quot;,&quot;url&quot;:&quot;loaders/svg-inline-loader&quot;},{&quot;title&quot;:&quot;thread-loader&quot;,&quot;url&quot;:&quot;loaders/thread-loader&quot;},{&quot;title&quot;:&quot;transform-loader&quot;,&quot;url&quot;:&quot;loaders/transform-loader&quot;},{&quot;title&quot;:&quot;url-loader&quot;,&quot;url&quot;:&quot;loaders/url-loader&quot;},{&quot;title&quot;:&quot;val-loader&quot;,&quot;url&quot;:&quot;loaders/val-loader&quot;},{&quot;title&quot;:&quot;worker-loader&quot;,&quot;url&quot;:&quot;loaders/worker-loader&quot;},{&quot;title&quot;:&quot;yaml-frontmatter-loader&quot;,&quot;url&quot;:&quot;loaders/yaml-frontmatter-loader&quot;}]},{&quot;title&quot;:&quot;Plugins&quot;,&quot;url&quot;:&quot;plugins&quot;,&quot;pages&quot;:[{&quot;title&quot;:&quot;MinChunkSizePlugin&quot;,&quot;url&quot;:&quot;plugins/min-chunk-size-plugin&quot;},{&quot;title&quot;:&quot;BabiliWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/babili-webpack-plugin&quot;},{&quot;title&quot;:&quot;BannerPlugin&quot;,&quot;url&quot;:&quot;plugins/banner-plugin&quot;},{&quot;title&quot;:&quot;CommonsChunkPlugin&quot;,&quot;url&quot;:&quot;plugins/commons-chunk-plugin&quot;},{&quot;title&quot;:&quot;ComponentWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/component-webpack-plugin&quot;},{&quot;title&quot;:&quot;CompressionWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/compression-webpack-plugin&quot;},{&quot;title&quot;:&quot;ContextReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/context-replacement-plugin&quot;},{&quot;title&quot;:&quot;DefinePlugin&quot;,&quot;url&quot;:&quot;plugins/define-plugin&quot;},{&quot;title&quot;:&quot;DllPlugin&quot;,&quot;url&quot;:&quot;plugins/dll-plugin&quot;},{&quot;title&quot;:&quot;EnvironmentPlugin&quot;,&quot;url&quot;:&quot;plugins/environment-plugin&quot;},{&quot;title&quot;:&quot;ExtractTextWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/extract-text-webpack-plugin&quot;},{&quot;title&quot;:&quot;HotModuleReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/hot-module-replacement-plugin&quot;},{&quot;title&quot;:&quot;HtmlWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/html-webpack-plugin&quot;},{&quot;title&quot;:&quot;I18nWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/i18n-webpack-plugin&quot;},{&quot;title&quot;:&quot;IgnorePlugin&quot;,&quot;url&quot;:&quot;plugins/ignore-plugin&quot;},{&quot;title&quot;:&quot;LimitChunkCountPlugin&quot;,&quot;url&quot;:&quot;plugins/limit-chunk-count-plugin&quot;},{&quot;title&quot;:&quot;LoaderOptionsPlugin&quot;,&quot;url&quot;:&quot;plugins/loader-options-plugin&quot;},{&quot;title&quot;:&quot;NoEmitOnErrorsPlugin&quot;,&quot;url&quot;:&quot;plugins/no-emit-on-errors-plugin&quot;},{&quot;title&quot;:&quot;NormalModuleReplacementPlugin&quot;,&quot;url&quot;:&quot;plugins/normal-module-replacement-plugin&quot;},{&quot;title&quot;:&quot;NpmInstallWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/npm-install-webpack-plugin&quot;},{&quot;title&quot;:&quot;ProvidePlugin&quot;,&quot;url&quot;:&quot;plugins/provide-plugin&quot;},{&quot;title&quot;:&quot;SourceMapDevToolPlugin&quot;,&quot;url&quot;:&quot;plugins/source-map-dev-tool-plugin&quot;},{&quot;title&quot;:&quot;UglifyjsWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/uglifyjs-webpack-plugin&quot;},{&quot;title&quot;:&quot;ZopfliWebpackPlugin&quot;,&quot;url&quot;:&quot;plugins/zopfli-webpack-plugin&quot;}]},{&quot;title&quot;:&quot;&#x652F;&#x6301;&quot;,&quot;url&quot;:&quot;support&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/feedback&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;vote/moneyDistribution&quot;,&quot;pages&quot;:[]},{&quot;url&quot;:&quot;organization&quot;,&quot;pages&quot;:[]},{&quot;title&quot;:&quot;&#x5176;&#x4ED6;&quot;,&quot;url&quot;:&quot;/&quot;,&quot;pages&quot;:[]}]}"><nav class="sidebar-mobile"></nav></div><div class="container page"><a href="https://www.ag-grid.com/?utm_source=webpack&amp;utm_medium=banner&amp;utm_campaign=sponsorship" target="_blank" class="sponsors"><img src="/bf176a25b4f8227fea804854c98dc5e2.png"><img src="/6bc5d8cf78d442a984e70195db059b69.svg" style="width:100px;"><div style="margin-top:1em;font-size:2em;text-align:center;color:#535353;">ag-grid is proud to partner with webpack</div></a><div class="interactive" id="components/sidebar/sidebar.jsx" data-props="{&quot;sectionName&quot;:&quot;api&quot;,&quot;pages&quot;:[{&quot;url&quot;:&quot;api/cli&quot;,&quot;title&quot;:&quot;&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(CLI)&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x4E0D;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x5E38;&#x7528;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x8F93;&#x51FA;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x793A;&#x4F8B;&#x7528;&#x6CD5;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Debug &#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;debug-&quot;},{&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Watch &#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;watch-&quot;},{&quot;title&quot;:&quot;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Resolve &#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;resolve-&quot;},{&quot;title&quot;:&quot;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x9AD8;&#x7EA7;&#x914D;&#x7F6E;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x7B80;&#x5199;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;Profiling&quot;,&quot;id&quot;:&quot;profiling&quot;}]},{&quot;url&quot;:&quot;api/module-methods&quot;,&quot;title&quot;:&quot;Module API - Methods&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;ES6 (Recommended)&quot;,&quot;id&quot;:&quot;es6-recommended-&quot;},{&quot;title&quot;:&quot;import&quot;,&quot;id&quot;:&quot;import&quot;},{&quot;title&quot;:&quot;export&quot;,&quot;id&quot;:&quot;export&quot;},{&quot;title&quot;:&quot;import()&quot;,&quot;id&quot;:&quot;import-&quot;},{&quot;title&quot;:&quot;CommonJS&quot;,&quot;id&quot;:&quot;commonjs&quot;},{&quot;title&quot;:&quot;require&quot;,&quot;id&quot;:&quot;require&quot;},{&quot;title&quot;:&quot;require.resolve&quot;,&quot;id&quot;:&quot;require-resolve&quot;},{&quot;title&quot;:&quot;require.cache&quot;,&quot;id&quot;:&quot;require-cache&quot;},{&quot;title&quot;:&quot;require.ensure&quot;,&quot;id&quot;:&quot;require-ensure&quot;},{&quot;title&quot;:&quot;AMD&quot;,&quot;id&quot;:&quot;amd&quot;},{&quot;title&quot;:&quot;define (with factory)&quot;,&quot;id&quot;:&quot;define-with-factory-&quot;},{&quot;title&quot;:&quot;define (with value)&quot;,&quot;id&quot;:&quot;define-with-value-&quot;},{&quot;title&quot;:&quot;require (amd-version)&quot;,&quot;id&quot;:&quot;require-amd-version-&quot;},{&quot;title&quot;:&quot;Labeled Modules&quot;,&quot;id&quot;:&quot;labeled-modules&quot;},{&quot;title&quot;:&quot;export label&quot;,&quot;id&quot;:&quot;export-label&quot;},{&quot;title&quot;:&quot;require label&quot;,&quot;id&quot;:&quot;require-label&quot;},{&quot;title&quot;:&quot;Webpack&quot;,&quot;id&quot;:&quot;webpack&quot;},{&quot;title&quot;:&quot;require.context&quot;,&quot;id&quot;:&quot;require-context&quot;},{&quot;title&quot;:&quot;require.include&quot;,&quot;id&quot;:&quot;require-include&quot;},{&quot;title&quot;:&quot;require.resolveWeak&quot;,&quot;id&quot;:&quot;require-resolveweak&quot;}]},{&quot;url&quot;:&quot;api/module-variables&quot;,&quot;title&quot;:&quot;Module API - Variables&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;module.loaded (NodeJS)&quot;,&quot;id&quot;:&quot;module-loaded-nodejs-&quot;},{&quot;title&quot;:&quot;module.hot (webpack-specific)&quot;,&quot;id&quot;:&quot;module-hot-webpack-specific-&quot;},{&quot;title&quot;:&quot;module.id (CommonJS)&quot;,&quot;id&quot;:&quot;module-id-commonjs-&quot;},{&quot;title&quot;:&quot;module.exports (CommonJS)&quot;,&quot;id&quot;:&quot;module-exports-commonjs-&quot;},{&quot;title&quot;:&quot;exports (CommonJS)&quot;,&quot;id&quot;:&quot;exports-commonjs-&quot;},{&quot;title&quot;:&quot;global (NodeJS)&quot;,&quot;id&quot;:&quot;global-nodejs-&quot;},{&quot;title&quot;:&quot;process (NodeJS)&quot;,&quot;id&quot;:&quot;process-nodejs-&quot;},{&quot;title&quot;:&quot;__dirname (NodeJS)&quot;,&quot;id&quot;:&quot;__dirname-nodejs-&quot;},{&quot;title&quot;:&quot;__filename (NodeJS)&quot;,&quot;id&quot;:&quot;__filename-nodejs-&quot;},{&quot;title&quot;:&quot;__resourceQuery (webpack-specific)&quot;,&quot;id&quot;:&quot;__resourcequery-webpack-specific-&quot;},{&quot;title&quot;:&quot;__webpack_public_path__ (webpack-specific)&quot;,&quot;id&quot;:&quot;__webpack_public_path__-webpack-specific-&quot;},{&quot;title&quot;:&quot;__webpack_require__ (webpack-specific)&quot;,&quot;id&quot;:&quot;__webpack_require__-webpack-specific-&quot;},{&quot;title&quot;:&quot;__webpack_chunk_load__ (webpack-specific)&quot;,&quot;id&quot;:&quot;__webpack_chunk_load__-webpack-specific-&quot;},{&quot;title&quot;:&quot;__webpack_modules__ (webpack-specific)&quot;,&quot;id&quot;:&quot;__webpack_modules__-webpack-specific-&quot;},{&quot;title&quot;:&quot;__webpack_hash__ (webpack-specific)&quot;,&quot;id&quot;:&quot;__webpack_hash__-webpack-specific-&quot;},{&quot;title&quot;:&quot;__non_webpack_require__ (webpack-specific)&quot;,&quot;id&quot;:&quot;__non_webpack_require__-webpack-specific-&quot;},{&quot;title&quot;:&quot;DEBUG  (webpack-specific)&quot;,&quot;id&quot;:&quot;debug-webpack-specific-&quot;}]},{&quot;url&quot;:&quot;api/node&quot;,&quot;title&quot;:&quot;Node.js API&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5B89;&#x88C5;(Installation)&quot;,&quot;id&quot;:&quot;-installation-&quot;},{&quot;title&quot;:&quot;webpack()&quot;,&quot;id&quot;:&quot;webpack-&quot;},{&quot;title&quot;:&quot;Compiler &#x5B9E;&#x4F8B;(Compiler Instance)&quot;,&quot;id&quot;:&quot;compiler-compiler-instance-&quot;},{&quot;title&quot;:&quot;&#x6267;&#x884C;(Run)&quot;,&quot;id&quot;:&quot;-run-&quot;},{&quot;title&quot;:&quot;&#x76D1;&#x542C;(Watching)&quot;,&quot;id&quot;:&quot;-watching-&quot;},{&quot;title&quot;:&quot;&#x5173;&#x95ED; Watching(Close Watching)&quot;,&quot;id&quot;:&quot;-watching-close-watching-&quot;},{&quot;title&quot;:&quot;&#x4F5C;&#x5E9F; Watching(Invalidate Watching)&quot;,&quot;id&quot;:&quot;-watching-invalidate-watching-&quot;},{&quot;title&quot;:&quot;Stats &#x5BF9;&#x8C61;(Stats Object)&quot;,&quot;id&quot;:&quot;stats-stats-object-&quot;},{&quot;title&quot;:&quot;stats.hasErrors()&quot;,&quot;id&quot;:&quot;stats-haserrors-&quot;},{&quot;title&quot;:&quot;stats.hasWarnings()&quot;,&quot;id&quot;:&quot;stats-haswarnings-&quot;},{&quot;title&quot;:&quot;stats.toJson(options)&quot;,&quot;id&quot;:&quot;stats-tojson-options-&quot;},{&quot;title&quot;:&quot;stats.toString(options)&quot;,&quot;id&quot;:&quot;stats-tostring-options-&quot;},{&quot;title&quot;:&quot;&#x9519;&#x8BEF;&#x5904;&#x7406;(Error Handling)&quot;,&quot;id&quot;:&quot;-error-handling-&quot;},{&quot;title&quot;:&quot;&#x81EA;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;(Custom File Systems)&quot;,&quot;id&quot;:&quot;-custom-file-systems-&quot;}]},{&quot;url&quot;:&quot;api/loaders&quot;,&quot;title&quot;:&quot;Loader API&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;&#x5982;&#x4F55;&#x5199;&#x4E00;&#x4E2A; Loader&quot;,&quot;id&quot;:&quot;-loader&quot;},{&quot;title&quot;:&quot;&#x793A;&#x4F8B;&quot;,&quot;id&quot;:&quot;-&quot;},{&quot;title&quot;:&quot;&#x540C;&#x6B65; Loader&quot;,&quot;id&quot;:&quot;-loader&quot;},{&quot;title&quot;:&quot;&#x5F02;&#x6B65; Loader&quot;,&quot;id&quot;:&quot;-loader&quot;},{&quot;title&quot;:&quot;\&quot;Raw\&quot; Loader&quot;,&quot;id&quot;:&quot;-raw-loader&quot;},{&quot;title&quot;:&quot;Pitching Loader&quot;,&quot;id&quot;:&quot;pitching-loader&quot;},{&quot;title&quot;:&quot;The loader context&quot;,&quot;id&quot;:&quot;the-loader-context&quot;},{&quot;title&quot;:&quot;this.version&quot;,&quot;id&quot;:&quot;this-version&quot;},{&quot;title&quot;:&quot;this.context&quot;,&quot;id&quot;:&quot;this-context&quot;},{&quot;title&quot;:&quot;this.request&quot;,&quot;id&quot;:&quot;this-request&quot;},{&quot;title&quot;:&quot;this.query&quot;,&quot;id&quot;:&quot;this-query&quot;},{&quot;title&quot;:&quot;this.callback&quot;,&quot;id&quot;:&quot;this-callback&quot;},{&quot;title&quot;:&quot;this.async&quot;,&quot;id&quot;:&quot;this-async&quot;},{&quot;title&quot;:&quot;this.data&quot;,&quot;id&quot;:&quot;this-data&quot;},{&quot;title&quot;:&quot;this.cacheable&quot;,&quot;id&quot;:&quot;this-cacheable&quot;},{&quot;title&quot;:&quot;this.loaders&quot;,&quot;id&quot;:&quot;this-loaders&quot;},{&quot;title&quot;:&quot;this.loaderIndex&quot;,&quot;id&quot;:&quot;this-loaderindex&quot;},{&quot;title&quot;:&quot;this.resource&quot;,&quot;id&quot;:&quot;this-resource&quot;},{&quot;title&quot;:&quot;this.resourcePath&quot;,&quot;id&quot;:&quot;this-resourcepath&quot;},{&quot;title&quot;:&quot;this.resourceQuery&quot;,&quot;id&quot;:&quot;this-resourcequery&quot;},{&quot;title&quot;:&quot;this.target&quot;,&quot;id&quot;:&quot;this-target&quot;},{&quot;title&quot;:&quot;this.webpack&quot;,&quot;id&quot;:&quot;this-webpack&quot;},{&quot;title&quot;:&quot;this.sourceMap&quot;,&quot;id&quot;:&quot;this-sourcemap&quot;},{&quot;title&quot;:&quot;this.emitWarning&quot;,&quot;id&quot;:&quot;this-emitwarning&quot;},{&quot;title&quot;:&quot;this.emitError&quot;,&quot;id&quot;:&quot;this-emiterror&quot;},{&quot;title&quot;:&quot;this.loadModule&quot;,&quot;id&quot;:&quot;this-loadmodule&quot;},{&quot;title&quot;:&quot;this.resolve&quot;,&quot;id&quot;:&quot;this-resolve&quot;},{&quot;title&quot;:&quot;this.addDependency&quot;,&quot;id&quot;:&quot;this-adddependency&quot;},{&quot;title&quot;:&quot;this.addContextDependency&quot;,&quot;id&quot;:&quot;this-addcontextdependency&quot;},{&quot;title&quot;:&quot;this.clearDependencies&quot;,&quot;id&quot;:&quot;this-cleardependencies&quot;},{&quot;title&quot;:&quot;this.emitFile&quot;,&quot;id&quot;:&quot;this-emitfile&quot;},{&quot;title&quot;:&quot;this.fs&quot;,&quot;id&quot;:&quot;this-fs&quot;},{&quot;title&quot;:&quot;Deprecated context properties&quot;,&quot;id&quot;:&quot;deprecated-context-properties&quot;},{&quot;title&quot;:&quot;this.exec&quot;,&quot;id&quot;:&quot;this-exec&quot;},{&quot;title&quot;:&quot;this.resolveSync&quot;,&quot;id&quot;:&quot;this-resolvesync&quot;},{&quot;title&quot;:&quot;this.value&quot;,&quot;id&quot;:&quot;this-value&quot;},{&quot;title&quot;:&quot;this.inputValue&quot;,&quot;id&quot;:&quot;this-inputvalue&quot;},{&quot;title&quot;:&quot;this.options&quot;,&quot;id&quot;:&quot;this-options&quot;},{&quot;title&quot;:&quot;this.debug&quot;,&quot;id&quot;:&quot;this-debug&quot;},{&quot;title&quot;:&quot;this.minimize&quot;,&quot;id&quot;:&quot;this-minimize&quot;},{&quot;title&quot;:&quot;this._compilation&quot;,&quot;id&quot;:&quot;this-_compilation&quot;},{&quot;title&quot;:&quot;this._compiler&quot;,&quot;id&quot;:&quot;this-_compiler&quot;},{&quot;title&quot;:&quot;this._module&quot;,&quot;id&quot;:&quot;this-_module&quot;}]},{&quot;url&quot;:&quot;api/hot-module-replacement&quot;,&quot;title&quot;:&quot;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&quot;,&quot;anchors&quot;:[{&quot;title&quot;:&quot;accept&quot;,&quot;id&quot;:&quot;accept&quot;},{&quot;title&quot;:&quot;decline&quot;,&quot;id&quot;:&quot;decline&quot;},{&quot;title&quot;:&quot;dispose&#xFF08;&#x6216; addDisposeHandler&#xFF09;&quot;,&quot;id&quot;:&quot;dispose-adddisposehandler-&quot;},{&quot;title&quot;:&quot;removeDisposeHandler&quot;,&quot;id&quot;:&quot;removedisposehandler&quot;},{&quot;title&quot;:&quot;status&quot;,&quot;id&quot;:&quot;status&quot;},{&quot;title&quot;:&quot;check&quot;,&quot;id&quot;:&quot;check&quot;},{&quot;title&quot;:&quot;apply&quot;,&quot;id&quot;:&quot;apply&quot;},{&quot;title&quot;:&quot;addStatusHandler&quot;,&quot;id&quot;:&quot;addstatushandler&quot;},{&quot;title&quot;:&quot;removeStatusHandler&quot;,&quot;id&quot;:&quot;removestatushandler&quot;}]}],&quot;currentPage&quot;:&quot;api/cli&quot;}"><nav class="sidebar"></nav></div><section class="page__content"><h1>&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(CLI)</h1><div class="page-links"><a class="page-links__link" href="https://github.com/webpack/webpack.js.org/edit/master/content/api/cli.md">Edit Document<i class="page-links__icon icon-edit"></i></a></div><div><p>webpack &#x63D0;&#x4F9B;&#x4E86;&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;&#xFF08;CLI&#xFF09;&#xFF0C;&#x4EE5;&#x4FBF;&#x5BF9;&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x548C;&#x4EA4;&#x4E92;&#x3002;&#x8FD9;&#x5BF9;&#x4E8E;&#x5236;&#x5B9A;&#x65E9;&#x671F;&#x539F;&#x578B;&#x3001;&#x8F6E;&#x5ED3;&#x3001;&#x7F16;&#x5199; npm &#x811A;&#x672C; &#x6216;&#x8005;&#x4E00;&#x4E9B;&#x4E2A;&#x4EBA;&#x81EA;&#x5B9A;&#x4E49;&#x9700;&#x6C42;&#x5F88;&#x6709;&#x7528;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x66F4;&#x5408;&#x9002;&#x4E14;&#x65B9;&#x4FBF;&#x5730;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>webpack.config.js</code> &#x4E2D;&#x5BF9; webpack &#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;CLI &#x4E2D;&#x4F20;&#x5165;&#x7684;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#x4F1A;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6620;&#x5C04;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684; webpack &#x5C1A;&#x672A;&#x5F00;&#x59CB;&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;<a href="/guides/installation">&#x5B89;&#x88C5;&#x6307;&#x5357;</a>&#x3002;</p>
+<blockquote class="tip"><div class="tip-content"> webpack &#x7684;&#x65B0; CLI &#x6B63;&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x3002;&#x6B63;&#x5728;&#x6DFB;&#x52A0;&#x65B0;&#x529F;&#x80FD;&#xFF0C;&#x4F8B;&#x5982; <code>--init</code> &#x53C2;&#x6570;&#x3002;<a href="https://github.com/webpack/webpack-cli">&#x67E5;&#x770B;&#x8BE6;&#x60C5;&#xFF01;</a> </div></blockquote><h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x7528;&#x6CD5;</span><a class="icon-link" href="#-"></a></h2>
+<pre><code class="lang-sh">webpack <span class="token punctuation">[</span>--config webpack.config.js<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x76F8;&#x5173;&#x9009;&#x9879;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="/configuration">&#x914D;&#x7F6E;</a>&#x3002;</p>
+<h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x4E0D;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x7528;&#x6CD5;</span><a class="icon-link" href="#-"></a></h2>
+<pre><code class="lang-sh">webpack <span class="token operator">&lt;</span>entry<span class="token operator">&gt;</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>entry<span class="token operator">&gt;</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span>output<span class="token operator">&gt;</span>
+</code></pre>
+<p><strong><code>&lt;entry&gt;</code></strong></p>
+<p>&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x540D;&#x6216;&#x4E00;&#x7EC4;&#x88AB;&#x547D;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4F5C;&#x4E3A;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x7684;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x591A;&#x4E2A;&#x5165;&#x53E3;&#xFF08;&#x6BCF;&#x4E2A;&#x5165;&#x53E3;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x52A0;&#x8F7D;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x5F62;&#x5F0F;&#x4E3A; <code>&lt;name&gt; = &lt;request&gt;</code> &#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x3002;&#x5B83;&#x5C06;&#x88AB;&#x6620;&#x5C04;&#x5230;&#x914D;&#x7F6E;&#x9009;&#x9879;(configuration option)&#x7684; <code>entry</code> &#x5C5E;&#x6027;&#x3002;</p>
+<p><strong><code>&lt;output&gt;</code></strong></p>
+<p>&#x8981;&#x4FDD;&#x5B58;&#x7684; bundled &#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x548C;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x5B83;&#x5C06;&#x6620;&#x5C04;&#x5230;&#x914D;&#x7F6E;&#x9009;&#x9879; <code>output.path</code> &#x548C; <code>output.filename</code>&#x3002;</p>
+<p><strong>&#x793A;&#x4F8B;</strong></p>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-bash"><span class="token keyword">.</span>
+&#x251C;&#x2500;&#x2500; dist
+&#x251C;&#x2500;&#x2500; index.html
+&#x2514;&#x2500;&#x2500; src
+    &#x251C;&#x2500;&#x2500; index.js
+    &#x251C;&#x2500;&#x2500; index2.js
+    &#x2514;&#x2500;&#x2500; others.js
+</code></pre>
+<pre><code class="lang-bash">webpack src/index.js dist/bundle.js
+</code></pre>
+<p>&#x6253;&#x5305;&#x6E90;&#x7801;&#xFF0C;&#x5165;&#x53E3;&#x4E3A; <code>index.js</code>&#xFF0C;&#x5E76;&#x4E14;&#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x4E3A; <code>dist</code>&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x4E3A; <code>bundle.js</code></p>
+<pre><code class="lang-bash">    <span class="token operator">|</span> Asset     <span class="token operator">|</span> Size    <span class="token operator">|</span> Chunks      <span class="token operator">|</span> Chunk Names <span class="token operator">|</span>
+    <span class="token operator">|</span>-----------<span class="token operator">|</span>---------<span class="token operator">|</span>-------------<span class="token operator">|</span>-------------<span class="token operator">|</span>
+    <span class="token operator">|</span> bundle.js <span class="token operator">|</span> 1.54 kB <span class="token operator">|</span> 0 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index       <span class="token operator">|</span>
+    <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/index.js 51 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/others.js 29 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+</code></pre>
+<pre><code class="lang-bash">webpack index<span class="token operator">=</span>./src/index.js entry2<span class="token operator">=</span>./src/index2.js dist/bundle.js
+</code></pre>
+<p>&#x4EE5;&#x591A;&#x4E2A;&#x5165;&#x53E3;&#x7684;&#x65B9;&#x5F0F;&#x6253;&#x5305;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">    <span class="token operator">|</span> Asset     <span class="token operator">|</span> Size    <span class="token operator">|</span> Chunks        <span class="token operator">|</span> Chunk Names   <span class="token operator">|</span>
+    <span class="token operator">|</span>-----------<span class="token operator">|</span>---------<span class="token operator">|</span>---------------<span class="token operator">|</span>---------------<span class="token operator">|</span>
+    <span class="token operator">|</span> bundle.js <span class="token operator">|</span> 1.55 kB <span class="token operator">|</span> 0,1 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index, entry2 <span class="token operator">|</span>
+    <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/index.js 51 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/index2.js 54 bytes <span class="token punctuation">{</span>1<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/others.js 29 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">{</span>1<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+</code></pre>
+<h3 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x5E38;&#x7528;&#x914D;&#x7F6E;</span><a class="icon-link" href="#-"></a></h3>
+<p><strong>&#x5217;&#x51FA;&#x547D;&#x4EE4;&#x884C;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;</strong></p>
+<pre><code class="lang-bash">webpack --help
+webpack -h
+</code></pre>
+<p><strong>&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x6784;&#x5EFA;</strong></p>
+<p>&#x6307;&#x5B9A;&#x5176;&#x5B83;&#x7684;<a href="/configuration">&#x914D;&#x7F6E;</a>&#x6587;&#x4EF6;&#x3002;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x4E3A; <code>webpack.config.js</code>&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528;&#x5176;&#x5B83;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x5165;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-bash">webpack --config example.config.js
+</code></pre>
+<p><strong>&#x6307;&#x5B9A;&#x6784;&#x5EFA;&#x73AF;&#x5883;</strong></p>
+<p>&#x4F20;&#x5165; webpack &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x7684;<a href="/configuration/configuration-types">&#x73AF;&#x5883;</a>&#x53D8;&#x91CF;&#x3002;</p>
+<pre><code class="lang-bash">webpack --env.production    <span class="token comment" spellcheck="true"># &#x751F;&#x4EA7;&#x73AF;&#x5883;&#x8BBE;&#x7F6E;&#x4E3A; true</span>
+webpack --env.platform<span class="token operator">=</span>web  <span class="token comment" spellcheck="true"># &#x5E73;&#x53F0;&#x8BBE;&#x7F6E;&#x4E3A; &quot;web&quot;</span>
+</code></pre>
+<p><strong>&#x4EE5; JSON &#x683C;&#x5F0F;&#x8F93;&#x51FA; webpack &#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</strong></p>
+<pre><code class="lang-bash">webpack --json
+webpack --json <span class="token operator">&gt;</span> stats.json
+</code></pre>
+<p>&#x5728;&#x5176;&#x4ED6;&#x6BCF;&#x4E2A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;webpack &#x4F1A;&#x6253;&#x5370;&#x4E00;&#x7EC4;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x4E8E;&#x663E;&#x793A; bundle, chunk &#x548C;&#x7528;&#x65F6;&#x7B49;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;&#x4F7F;&#x7528;&#x6B64;&#x9009;&#x9879;&#xFF0C;&#x8F93;&#x51FA;&#x53EF;&#x4EE5;&#x662F; JSON &#x5BF9;&#x8C61;&#x3002;&#x6B64;&#x8F93;&#x51FA;&#x6587;&#x4EF6;(response)&#x53EF;&#x88AB; webpack &#x7684;<a href="https://webpack.github.com/analyse">&#x5206;&#x6790;&#x5DE5;&#x5177;</a>&#xFF0C;&#x6216; chrisbateman &#x7684; <a href="https://chrisbateman.github.io/webpack-visualizer/">webpack &#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;</a>&#xFF0C;&#x6216; th0r &#x7684; <a href="https://github.com/th0r/webpack-bundle-analyzer">webpack bundle &#x5206;&#x6790;&#x5DE5;&#x5177;</a>&#x63A5;&#x6536;&#x540E;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x5C06;&#x63A5;&#x6536; JSON &#x5E76;&#x4EE5;&#x56FE;&#x5F62;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#x6784;&#x5EFA;&#x7684;&#x6240;&#x6709;&#x7EC6;&#x8282;&#x3002;</p>
+<h3 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x8F93;&#x51FA;&#x914D;&#x7F6E;</span><a class="icon-link" href="#-"></a></h3>
+<p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x6784;&#x5EFA;&#x6D41;&#x7A0B;&#x7684;&#x67D0;&#x4E9B;<a href="/configuration/output">&#x8F93;&#x51FA;</a>&#x53C2;&#x6570;&#x3002;</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x8BF4;&#x660E;</div><div class="table-th">&#x8F93;&#x5165;&#x7C7B;&#x578B;</div><div class="table-th">&#x9ED8;&#x8BA4;&#x503C;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-chunk-filename
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8F93;&#x51FA;&#x7684;&#x9644;&#x5E26; chunk &#x7684;&#x6587;&#x4EF6;&#x540D;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        &#x542B;&#x6709; [id] &#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x800C;&#x4E0D;&#x662F; [name] &#x6216;&#x8005; [id] &#x4F5C;&#x4E3A;&#x524D;&#x7F00;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-filename
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x6253;&#x5305;&#x6587;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x540D;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        [name].js
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-jsonp-function
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x52A0;&#x8F7D; Chunk &#x65F6;&#x4F7F;&#x7528;&#x7684; JSONP &#x51FD;&#x6570;&#x540D;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        webpackJsonp
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-library
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4EE5;&#x5E93;&#x7684;&#x5F62;&#x5F0F;&#x5BFC;&#x51FA;&#x5165;&#x53E3;&#x6587;&#x4EF6;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-library-target
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4EE5;&#x5E93;&#x7684;&#x5F62;&#x5F0F;&#x5BFC;&#x51FA;&#x5165;&#x53E3;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x8F93;&#x51FA;&#x7684;&#x7C7B;&#x578B;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        var
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-path
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8F93;&#x51FA;&#x7684;&#x8DEF;&#x5F84;&#xFF08;&#x5728;&#x516C;&#x5171;&#x8DEF;&#x5F84;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF09;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5F53;&#x524D;&#x76EE;&#x5F55;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-pathinfo
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x52A0;&#x5165;&#x4E00;&#x4E9B;&#x4F9D;&#x8D56;&#x4FE1;&#x606F;&#x7684;&#x6CE8;&#x89E3;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        false
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-public-path
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x516C;&#x5171;&#x8DEF;&#x5F84;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        /
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --output-source-map-filename
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x751F;&#x6210;&#x7684; SourceMap &#x7684;&#x6587;&#x4EF6;&#x540D;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        [name].map or [outputFilename].map
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h4 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x793A;&#x4F8B;&#x7528;&#x6CD5;</span><a class="icon-link" href="#-"></a></h4>
+<pre><code class="lang-bash">webpack index<span class="token operator">=</span>./src/index.js index2<span class="token operator">=</span>./src/index2.js --output-path<span class="token operator">=</span><span class="token string">&apos;./dist&apos;</span> --output-filename<span class="token operator">=</span><span class="token string">&apos;[name][hash].bundle.js&apos;</span>
+
+<span class="token operator">|</span> Asset                                <span class="token operator">|</span> Size    <span class="token operator">|</span> Chunks      <span class="token operator">|</span> Chunk Names   <span class="token operator">|</span>
+<span class="token operator">|</span>--------------------------------------<span class="token operator">|</span>---------<span class="token operator">|</span>-------------<span class="token operator">|</span>---------------<span class="token operator">|</span>
+<span class="token operator">|</span> index2740fdca26e9348bedbec.bundle.js <span class="token operator">|</span>  2.6 kB <span class="token operator">|</span> 0 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index2        <span class="token operator">|</span>
+<span class="token operator">|</span> index740fdca26e9348bedbec.bundle.js  <span class="token operator">|</span> 2.59 kB <span class="token operator">|</span> 1 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index         <span class="token operator">|</span>
+    <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/others.js 29 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">{</span>1<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/index.js 51 bytes <span class="token punctuation">{</span>1<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>2<span class="token punctuation">]</span> ./src/index2.js 54 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+</code></pre>
+<pre><code class="lang-bash">webpack.js index<span class="token operator">=</span>./src/index.js index2<span class="token operator">=</span>./src/index2.js --output-path<span class="token operator">=</span><span class="token string">&apos;./dist&apos;</span> --output-filename<span class="token operator">=</span><span class="token string">&apos;[name][hash].bundle.js&apos;</span> --devtool source-map --output-source-map-filename<span class="token operator">=</span><span class="token string">&apos;[name]123.map&apos;</span>
+
+<span class="token operator">|</span> Asset                                <span class="token operator">|</span> Size    <span class="token operator">|</span> Chunks      <span class="token operator">|</span> Chunk Names   <span class="token operator">|</span>
+<span class="token operator">|</span>--------------------------------------<span class="token operator">|</span>---------<span class="token operator">|</span>-------------<span class="token operator">|</span>---------------<span class="token operator">|</span>
+<span class="token operator">|</span> index2740fdca26e9348bedbec.bundle.js <span class="token operator">|</span> 2.76 kB <span class="token operator">|</span> 0 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index2        <span class="token operator">|</span>
+<span class="token operator">|</span>  index740fdca26e9348bedbec.bundle.js <span class="token operator">|</span> 2.74 kB <span class="token operator">|</span> 1 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index         <span class="token operator">|</span>
+<span class="token operator">|</span>                        index2123.map <span class="token operator">|</span> 2.95 kB <span class="token operator">|</span> 0 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index2        <span class="token operator">|</span>
+<span class="token operator">|</span>                         index123.map <span class="token operator">|</span> 2.95 kB <span class="token operator">|</span> 1 <span class="token punctuation">[</span>emitted<span class="token punctuation">]</span> <span class="token operator">|</span> index         <span class="token operator">|</span>
+    <span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/others.js 29 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">{</span>1<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>1<span class="token punctuation">]</span> ./src/index.js 51 bytes <span class="token punctuation">{</span>1<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    <span class="token punctuation">[</span>2<span class="token punctuation">]</span> ./src/index2.js 54 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+</code></pre>
+<h3 class="header"><a class="anchor" href="#debug-" id="debug-"></a><span class="text">Debug &#x914D;&#x7F6E;</span><a class="icon-link" href="#debug-"></a></h3>
+<p>&#x4EE5;&#x4E0B;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x4F60;&#x5728; Webpack &#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x4E2D;&#x66F4;&#x597D;&#x5730; debug&#x3002;</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x8BF4;&#x660E;</div><div class="table-th">&#x8F93;&#x5165;&#x7C7B;&#x578B;</div><div class="table-th">&#x9ED8;&#x8BA4;&#x503C;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --debug
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x628A; loader &#x8BBE;&#x7F6E;&#x4E3A; debug &#x6A21;&#x5F0F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        false
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --devtool
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4E3A;&#x6253;&#x5305;&#x597D;&#x7684;&#x8D44;&#x6E90;&#x5B9A;&#x4E49; <a href="/configuration/devtool/">source map &#x7684;&#x7C7B;&#x578B;</a>
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        -
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --progress
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x6253;&#x5370;&#x51FA;&#x7F16;&#x8BD1;&#x8FDB;&#x5EA6;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x503C;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8F93;&#x5165;&#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x9ED8;&#x8BA4;&#x503C;
+	    </div>
+	    <div class="table-td-content">
+	        false
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x6A21;&#x5757;&#x914D;&#x7F6E;</span><a class="icon-link" href="#-"></a></h3>
+<p>&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x7ED1;&#x5B9A; Webpack &#x5141;&#x8BB8;&#x7684;<a href="/configuration/module/">&#x6A21;&#x5757;</a>&#x3002;</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x8BF4;&#x660E;</div><div class="table-th">&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --module-bind
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4E3A; loader &#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;&#x6269;&#x5C55;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x4F7F;&#x7528;&#x65B9;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        --module-bind js=babel-loader
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --module-bind-post
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4E3A; post loader &#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;&#x6269;&#x5C55;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x4F7F;&#x7528;&#x65B9;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --module-bind-pre
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4E3A; pre loader &#x7ED1;&#x5B9A;&#x4E00;&#x4E2A;&#x6269;&#x5C55;
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#watch-" id="watch-"></a><span class="text">Watch &#x914D;&#x7F6E;</span><a class="icon-link" href="#watch-"></a></h3>
+<p>&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;<a href="/configuration/watch/">&#x89C2;&#x5BDF;</a>&#x4F9D;&#x8D56;&#x6587;&#x4EF6;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4E00;&#x65E6;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x6784;&#x5EFA;&#x6D41;&#x7A0B;&#x3002;</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x8BF4;&#x660E;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --watch, -w
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x89C2;&#x5BDF;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x53D8;&#x5316;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --save, -s
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x4FDD;&#x5B58;&#x7684;&#x65F6;&#x5019;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF0C;&#x65E0;&#x8BBA;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x53D8;&#x5316;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --watch-aggregate-timeout
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x6BEB;&#x79D2;&#x6570;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x5185;&#xFF0C;&#x6587;&#x4EF6;&#x82E5;&#x53D1;&#x9001;&#x4E86;&#x591A;&#x6B21;&#x53D8;&#x5316;&#xFF0C;&#x4F1A;&#x88AB;&#x5408;&#x5E76;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --watch-poll
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8F6E;&#x8BE2;&#x89C2;&#x5BDF;&#x6587;&#x4EF6;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x540C;&#x65F6;&#x4F1A;&#x6253;&#x5F00;&#x8F6E;&#x8BE2;&#x673A;&#x5236;&#xFF09;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --watch-stdin, --stdin
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5F53; stdin &#x5173;&#x95ED;&#x65F6;&#xFF0C;&#x9000;&#x51FA;&#x8FDB;&#x7A0B;
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x6027;&#x80FD;&#x4F18;&#x5316;&#x914D;&#x7F6E;</span><a class="icon-link" href="#-"></a></h3>
+<p>&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x7684;&#x6784;&#x5EFA;&#x65F6;&#xFF0C;&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8C03;&#x6574;&#x7684;&#x4E00;&#x4E9B;&#x6027;&#x80FD;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x89E3;&#x91CA;&#x8BF4;&#x660E;</div><div class="table-th">&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --optimize-max-chunks
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x9650;&#x5236; chunk &#x7684;&#x6570;&#x91CF;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;
+	    </div>
+	    <div class="table-td-content">
+	        <a href="/plugins/limit-chunk-count-plugin">LimitChunkCountPlugin</a>
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --optimize-min-chunk-size
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x9650;&#x5236; chunk &#x7684;&#x6700;&#x5C0F;&#x4F53;&#x79EF;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;
+	    </div>
+	    <div class="table-td-content">
+	        <a href="/plugins/min-chunk-size-plugin">MinChunkSizePlugin</a>
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --optimize-minimize
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x538B;&#x7F29;&#x6DF7;&#x6DC6; javascript&#xFF0C;&#x5E76;&#x4E14;&#x628A; loader &#x8BBE;&#x7F6E;&#x4E3A; minimizing
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;
+	    </div>
+	    <div class="table-td-content">
+	        <a href="/plugins/uglifyjs-webpack-plugin/">UglifyJsPlugin</a> &amp; <a href="/plugins/loader-options-plugin/">LoaderOptionsPlugin</a>
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#resolve-" id="resolve-"></a><span class="text">Resolve &#x914D;&#x7F6E;</span><a class="icon-link" href="#resolve-"></a></h3>
+<p>&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;  webpack <a href="/configuration/resolve/">resolver</a> &#x65F6;&#x4F7F;&#x7528;&#x7684;&#x522B;&#x540D;(alias)&#x548C;&#x6269;&#x5C55;&#x540D;(extension)&#x3002;</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x8BF4;&#x660E;</div><div class="table-th">&#x793A;&#x4F8B;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --resolve-alias
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x6307;&#x5B9A;&#x6A21;&#x5757;&#x7684;&#x522B;&#x540D;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x793A;&#x4F8B;
+	    </div>
+	    <div class="table-td-content">
+	        --resolve-alias jquery-plugin=jquery.plugin
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --resolve-extensions
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x6307;&#x5B9A;&#x9700;&#x8981;&#x88AB;&#x5904;&#x7406;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x6269;&#x5C55;&#x540D;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x793A;&#x4F8B;
+	    </div>
+	    <div class="table-td-content">
+	        --resolve-extensions .es6 .js .ts
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --resolve-loader-alias
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        Minimize javascript and switches loaders to minimizing
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x914D;&#x7F6E;</span><a class="icon-link" href="#-"></a></h3>
+<p>&#x4EE5;&#x4E0B;&#x9009;&#x9879;&#x7528;&#x4E8E;&#x914D;&#x7F6E; Webpack &#x5728;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#x7684;<a href="/configuration/stats/">&#x7EDF;&#x8BA1;&#x6570;&#x636E;</a>&#xFF0C;&#x4EE5;&#x53CA;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7684;&#x6837;&#x5F0F;&#x3002;</p>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x8BF4;&#x660E;</div><div class="table-th">&#x7C7B;&#x578B;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --color, --colors
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5F00;&#x542F;/&#x5173;&#x95ED;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x989C;&#x8272; [&#x9ED8;&#x8BA4;&#x503C;: (supports-color)]
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x9009;&#x62E9;<a href="/configuration/stats">&#x663E;&#x793A;&#x9884;&#x8BBE;</a>(verbose - &#x7E41;&#x7410;, detailed - &#x7EC6;&#x8282;, normal - &#x6B63;&#x5E38;, minimal - &#x6700;&#x5C0F;, errors-only - &#x4EC5;&#x9519;&#x8BEF;, none - &#x65E0;; &#x4ECE; webpack 3.0.0 &#x5F00;&#x59CB;)
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-cached
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x663E;&#x793A;&#x7F13;&#x5B58;&#x7684;&#x6A21;&#x5757;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-cached-assets
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x663E;&#x793A;&#x7F13;&#x5B58;&#x7684; assets
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-chunks
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x663E;&#x793A; chunks
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-depth
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x663E;&#x793A;&#x4ECE;&#x5165;&#x53E3;&#x8D77;&#x70B9;&#x5230;&#x6BCF;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x8DDD;&#x79BB;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-entrypoints
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x663E;&#x793A;&#x5165;&#x53E3;&#x6587;&#x4EF6;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-error-details
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-exclude
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x663E;&#x793A;&#x88AB;&#x6392;&#x9664;&#x7684;&#x6587;&#x4EF6;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-max-modules
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8BBE;&#x7F6E;&#x8F93;&#x51FA;&#x4E2D;&#x53EF;&#x89C1;&#x6A21;&#x5757;&#x7684;&#x6700;&#x5927;&#x6570;&#x91CF;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        number
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-modules
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x663E;&#x793A;&#x6240;&#x6709;&#x6A21;&#x5757;&#xFF0C;&#x5305;&#x62EC;&#x88AB;&#x6392;&#x9664;&#x7684;&#x6A21;&#x5757;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-optimization-bailout
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4F5C;&#x7528;&#x57DF;&#x63D0;&#x5347;&#x56DE;&#x9000;&#x89E6;&#x53D1;&#x5668;(Scope hoisting fallback trigger)&#xFF08;&#x4ECE; webpack 3.0.0 &#x5F00;&#x59CB;&#xFF09;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-origins
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x663E;&#x793A;&#x6700;&#x521D;&#x7684; chunk
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-provided-exports
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x663E;&#x793A;&#x6709;&#x5173;&#x4ECE;&#x6A21;&#x5757;&#x5BFC;&#x51FA;&#x7684;&#x4FE1;&#x606F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-reasons
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x663E;&#x793A;&#x6A21;&#x5757;&#x5305;&#x542B;&#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x7684;&#x539F;&#x56E0;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --display-used-exports
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x663E;&#x793A;&#x6A21;&#x5757;&#x4E2D;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x63A5;&#x53E3;&#xFF08;Tree Shaking&#xFF09;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --hide-modules
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x9690;&#x85CF;&#x5173;&#x4E8E;&#x6A21;&#x5757;&#x7684;&#x4FE1;&#x606F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --sort-assets-by
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5BF9; assets &#x5217;&#x8868;&#x4EE5;&#x67D0;&#x79CD;&#x5C5E;&#x6027;&#x6392;&#x5E8F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --sort-chunks-by
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5BF9; chunks &#x5217;&#x8868;&#x4EE5;&#x67D0;&#x79CD;&#x5C5E;&#x6027;&#x6392;&#x5E8F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --sort-modules-by
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5BF9;&#x6A21;&#x5757;&#x5217;&#x8868;&#x4EE5;&#x67D0;&#x79CD;&#x5C5E;&#x6027;&#x6392;&#x5E8F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        string
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --verbose
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x663E;&#x793A;&#x66F4;&#x591A;&#x4FE1;&#x606F;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7C7B;&#x578B;
+	    </div>
+	    <div class="table-td-content">
+	        boolean
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x9AD8;&#x7EA7;&#x914D;&#x7F6E;</span><a class="icon-link" href="#-"></a></h3>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x53C2;&#x6570;</div><div class="table-th">&#x89E3;&#x91CA;&#x8BF4;&#x660E;</div><div class="table-th">&#x7528;&#x6CD5;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --bail
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x4E00;&#x65E6;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x7ACB;&#x5373;&#x7EC8;&#x6B62;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --cache
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5F00;&#x542F;&#x7F13;&#x5B58; [watch &#x65F6;&#x4F1A;&#x9ED8;&#x8BA4;&#x6253;&#x5F00;]
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        --cache=false
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --define
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5B9A;&#x4E49; bundle &#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#xFF0C;&#x67E5;&#x770B; <a href="/guides/shimming">shimming</a>
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        --define process.env.NODE_ENV=&apos;development&apos;
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --hot
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5F00;&#x542F;<a href="/concepts/hot-module-replacement">&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;</a> [&#x4F7F;&#x7528; HotModuleReplacementPlugin]
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        --hot=true
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --labeled-modules
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        Enables &#x5F00;&#x542F;&#x6A21;&#x5757;&#x6807;&#x7B7E; [&#x4F7F;&#x7528; LabeledModulesPlugin]
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --plugin
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x52A0;&#x8F7D;&#x67D0;&#x4E2A;<a href="/configuration/plugins/">&#x63D2;&#x4EF6;</a>
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --prefetch
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x9884;&#x52A0;&#x8F7D;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        --prefetch=./files.js
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --provide
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x5728;&#x6240;&#x6709;&#x6A21;&#x5757;&#x4E2D;&#x5C06;&#x8FD9;&#x4E9B;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E3A;&#x81EA;&#x7531;&#x53D8;&#x91CF;&#xFF0C;&#x67E5;&#x770B; <a href="/guides/shimming">shimming</a>
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        --provide jQuery=jquery
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --records-input-path
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8BB0;&#x5F55;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF08;&#x8BFB;&#x53D6;&#xFF09;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --records-output-path
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8BB0;&#x5F55;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#xFF08;&#x5199;&#x5165;&#xFF09;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --records-path
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        &#x8BB0;&#x5F55;&#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x53C2;&#x6570;
+	    </div>
+	    <div class="table-td-content">
+	        --target
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x89E3;&#x91CA;&#x8BF4;&#x660E;
+	    </div>
+	    <div class="table-td-content">
+	        <a href="/configuration/target/">&#x76EE;&#x6807;</a>&#x7684;&#x6267;&#x884C;&#x73AF;&#x5883;
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7528;&#x6CD5;
+	    </div>
+	    <div class="table-td-content">
+	        --target=&apos;node&apos;
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x7B80;&#x5199;</span><a class="icon-link" href="#-"></a></h3>
+
+	    <div class="table">
+	        <div class="table-wrap">
+	          <div class="table-header">
+	              <div class="table-tr"><div class="table-th">&#x7B80;&#x5199;</div><div class="table-th">&#x542B;&#x4E49;</div></div>
+	          </div>
+	          <div class="table-body">
+	              <div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7B80;&#x5199;
+	    </div>
+	    <div class="table-td-content">
+	        -d
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x542B;&#x4E49;
+	    </div>
+	    <div class="table-td-content">
+	        --debug --devtool eval-cheap-module-source-map --output-pathinfo
+	    </div>
+	  </div></div><div class="table-tr"><div class="table-td">
+	    <div class="table-td-title">
+	        &#x7B80;&#x5199;
+	    </div>
+	    <div class="table-td-content">
+	        -p
+	    </div>
+	  </div><div class="table-td">
+	    <div class="table-td-title">
+	        &#x542B;&#x4E49;
+	    </div>
+	    <div class="table-td-content">
+	        --optimize-minimize --define process.env.NODE_ENV=&quot;production&quot;, see <a href="/guides/production">building for production</a>
+	    </div>
+	  </div></div>
+	          </div>
+	        </div>
+	    </div><h3 class="header"><a class="anchor" href="#profiling" id="profiling"></a><span class="text">Profiling</span><a class="icon-link" href="#profiling"></a></h3>
+<p><code>--profile</code> &#x9009;&#x9879;&#x6355;&#x83B7;&#x7F16;&#x8BD1;&#x65F6;&#x6BCF;&#x4E2A;&#x6B65;&#x9AA4;&#x7684;&#x65F6;&#x95F4;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5305;&#x542B;&#x5728;&#x8F93;&#x51FA;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-bash">webpack --profile
+
+&#x22EE;
+<span class="token punctuation">[</span>0<span class="token punctuation">]</span> ./src/index.js 90 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
+    factory:22ms building:16ms <span class="token operator">=</span> 38ms
+</code></pre>
+<p>For each module, the following details are included in the output as applicable:</p>
+<ul>
+<li><code>factory</code>: time to collect module metadata (e.g. resolving the filename)</li>
+<li><code>building</code>: time to build the module (e.g. loaders and parsing)</li>
+<li><code>dependencies</code>: time to identify and connect the module&#x2019;s dependencies</li>
+</ul>
+<p>Paired with <code>--progress</code>, <code>--profile</code> gives you an in depth idea of which step in the compilation is taking how long. This can help you optimise your build in a more informed manner.</p>
+<pre><code class="lang-bash">webpack --progress --profile
+
+30ms building modules
+1ms sealing
+1ms optimizing
+0ms basic module optimization
+1ms module optimization
+1ms advanced module optimization
+0ms basic chunk optimization
+0ms chunk optimization
+1ms advanced chunk optimization
+0ms module and chunk tree optimization
+1ms module reviving
+0ms module order optimization
+1ms module <span class="token function">id</span> optimization
+1ms chunk reviving
+0ms chunk order optimization
+1ms chunk <span class="token function">id</span> optimization
+10ms hashing
+0ms module assets processing
+13ms chunk assets processing
+1ms additional chunk assets processing
+0ms recording
+0ms additional asset processing
+26ms chunk asset optimization
+1ms asset optimization
+6ms emitting
+&#x22EE;
+</code></pre>
+<hr>
+<blockquote>
+<p>&#x539F;&#x6587;&#xFF1A;<a href="https://webpack.js.org/api/cli/">https://webpack.js.org/api/cli/</a></p>
+</blockquote>
+</div><div><hr><h3>&#x8FDB;&#x4E00;&#x6B65;&#x9605;&#x8BFB;</h3><ul><li><a href="https://survivejs.com/webpack/optimizing-build/analyzing-build-statistics/">Analyzing Build Statistics</a></li><li><a href="https://medium.com/@joeclever/three-simple-ways-to-inspect-a-webpack-bundle-7f6a8fe7195d#.7d2i06mjx">Three simple ways to inspect a webpack bundle</a></li><li><a href="https://hackernoon.com/optimising-your-application-bundle-size-with-webpack-e85b00bab579#.5w5ko08pq">Optimising your application bundle size with webpack</a></li><li><a href="https://medium.com/@ahmedelgabri/analyzing-optimizing-your-webpack-bundle-8590818af4df#.hce4vdjs9">Analyzing &amp; optimizing your webpack bundle</a></li><li><a href="https://medium.com/@nimgrg/analysing-and-minimising-the-size-of-client-side-bundle-with-webpack-and-source-map-explorer-41096559beca#.c3t2srr8x">Analysing and minimising the size of client side bundle with webpack and source-map-explorer</a></li></ul></div><div><hr><h3>&#x8D21;&#x732E;&#x4EBA;&#x5458;</h3><div class="contributors"><div class="contributors__list"><a class="contributor" href="https://github.com/ev1stensberg"><img src="https://github.com/ev1stensberg.png?size=90"><span class="contributor__name"> ev1stensberg</span></a><a class="contributor" href="https://github.com/simon04"><img src="https://github.com/simon04.png?size=90"><span class="contributor__name"> simon04</span></a></div></div></div><div class="interactive" id="components/gitter/gitter.jsx" data-props="{}"><span class="gitter"></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/getting-started" class="footer__link">&#x8D77;&#x6B65;</a><a href="/organization" class="footer__link">&#x7EC4;&#x7EC7;</a><a href="/contribute" class="footer__link">&#x652F;&#x6301;</a><a href="/guides/why-webpack#comparison" class="footer__link">&#x6BD4;&#x8F83;</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/6bc5d8cf78d442a984e70195db059b69.svg" alt="webpack icon"></a></section><section class="footer__right"><a href="/glossary" class="footer__link">&#x6982;&#x5FF5;&#x672F;&#x8BED;</a><a href="/branding" class="footer__link">&#x54C1;&#x724C;</a><a href="//gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">&#x66F4;&#x65B0;&#x65E5;&#x5FD7;</a><a href="/license" class="footer__link">&#x9075;&#x5FAA;&#x534F;&#x8BAE;</a><a class="footer__link">&#x7CA4;ICP&#x5907;17008907&#x53F7;</a><a href="/license" class="footer__link footer__license"><img alt="Creative Commons License" src="/c983c925f14c5a308465ce5f912be111.svg"><img alt="Creative Commons License" src="/c440e4e11ad72daf1899ca0616ddd8b8.svg"></a></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-46921629-2', 'auto');ga('send', 'pageview');</script></div>
+
+    
+      <script src="/1a044493e40c2d14a77e5d15679556f5.js"></script>
+    
+
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'webpack/webpack',
+        activationElement: false
+      };
+    </script>
+
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+  </body>
+</html>
