@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/76f2702fde0801c13325.css" rel="stylesheet">
+      <link href="/e86d19d8858ff8c935f1.css" rel="stylesheet">
     
 
     <script>
@@ -176,7 +176,7 @@ filename<span class="token punctuation">:</span> <span class="token string">&quo
 <p>&#x542F;&#x7528; webpack &#x7684;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;&#x7279;&#x6027;&#xFF1A;</p>
 <pre><code class="lang-js">hot<span class="token punctuation">:</span> <span class="token boolean">true</span>
 </code></pre>
-<blockquote class="tip"><div class="tip-content"> Note that you must also include a <code>new webpack.HotModuleReplacementPlugin()</code> to fully enable HMR. See the <a href="/concepts/hot-module-replacement">HMR concepts page</a> for more information. </div></blockquote><h2 class="header"><a class="anchor" href="#devserver-hotonly" id="devserver-hotonly"></a><span class="text"><code>devServer.hotOnly</code></span><a class="icon-link" href="#devserver-hotonly"></a></h2>
+<blockquote class="tip"><div class="tip-content"> Note that <code>webpack.HotModuleReplacementPlugin</code> is required to fully enable HMR. If <code>webpack</code> or <code>webpack-dev-server</code> are launched with the <code>--hot</code> option, this plugin will be added automatically, so you may not need to add this to your <code>webpack.config.js</code>. See the <a href="/concepts/hot-module-replacement">HMR concepts page</a> for more information. </div></blockquote><h2 class="header"><a class="anchor" href="#devserver-hotonly" id="devserver-hotonly"></a><span class="text"><code>devServer.hotOnly</code></span><a class="icon-link" href="#devserver-hotonly"></a></h2>
 <p><code>boolean</code></p>
 <p>Enables Hot Module Replacement (see <a href="#devserver-hot"><code>devServer.hot</code></a>) without page refresh as fallback in case of build failures.</p>
 <pre><code class="lang-js">hotOnly<span class="token punctuation">:</span> <span class="token boolean">true</span>
