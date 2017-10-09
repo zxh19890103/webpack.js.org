@@ -61,10 +61,10 @@
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
+        <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/loaders/index.html</loc>
@@ -94,10 +94,10 @@
         <loc>https://webpack.js.org/concepts/dependency-graph/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/hot-module-replacement/index.html</loc>
+        <loc>https://webpack.js.org/concepts/entry-points/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/entry-points/index.html</loc>
+        <loc>https://webpack.js.org/concepts/hot-module-replacement/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/loaders/index.html</loc>
@@ -235,13 +235,13 @@
         <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/installation/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/integrations/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/lazy-loading/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/installation/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/migrating/index.html</loc>
@@ -499,13 +499,13 @@
         <loc>https://webpack.js.org/api/plugins/dependency/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/plugins/parser/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/passing-a-config/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/resolver/index.html</loc>
