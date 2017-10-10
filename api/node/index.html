@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/ebcb9eafb2deb8ce3255.css" rel="stylesheet">
+      <link href="/b51c51ec5864e6457695.css" rel="stylesheet">
     
 
     <script>
@@ -69,7 +69,7 @@
 <li><code>.run(callback)</code></li>
 <li><code>.watch(watchOptions, handler)</code></li>
 </ul>
-<h2 class="header"><a class="anchor" href="#-run-" id="-run-"></a><span class="text">&#x6267;&#x884C;(Run)</span><a class="icon-link" href="#-run-"></a></h2>
+<blockquote class="warning"><div class="tip-content"> The API only supports a single concurrent compilation at a time. When using <code>run</code>, wait for it to finish before calling <code>run</code> or <code>watch</code> again. When using <code>watch</code>, call <code>close</code> and wait for it to finish before calling <code>run</code> or <code>watch</code> again. Concurrent compilations will corrupt the output files. </div></blockquote><h2 class="header"><a class="anchor" href="#-run-" id="-run-"></a><span class="text">&#x6267;&#x884C;(Run)</span><a class="icon-link" href="#-run-"></a></h2>
 <p>&#x8C03;&#x7528; <code>Compiler</code> &#x5B9E;&#x4F8B;&#x7684; <code>run</code> &#x65B9;&#x6CD5;&#x8DDF;&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x7684;&#x5FEB;&#x901F;&#x6267;&#x884C;&#x65B9;&#x6CD5;&#x5F88;&#x76F8;&#x4F3C;&#xFF1A;</p>
 <pre><code class="lang-js"><span class="token keyword">const</span> webpack <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;webpack&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
