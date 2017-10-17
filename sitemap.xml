@@ -31,10 +31,10 @@
         <loc>https://webpack.js.org/development/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/glossary/index.html</loc>
+        <loc>https://webpack.js.org/get-started/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/index.html</loc>
+        <loc>https://webpack.js.org/glossary/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/index.html</loc>
@@ -100,10 +100,10 @@
         <loc>https://webpack.js.org/api/passing-a-config/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/index.html</loc>
+        <loc>https://webpack.js.org/api/resolver/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/resolver/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/stats/index.html</loc>
@@ -277,13 +277,13 @@
         <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/installation/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/integrations/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/lazy-loading/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/installation/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/migrating/index.html</loc>
