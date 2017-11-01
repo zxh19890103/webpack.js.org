@@ -7,10 +7,10 @@
         <loc>https://webpack.js.org/about/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/index.html</loc>
+        <loc>https://webpack.js.org/analyze/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/analyze/index.html</loc>
+        <loc>https://webpack.js.org/api/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/branding/index.html</loc>
@@ -31,10 +31,10 @@
         <loc>https://webpack.js.org/development/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/index.html</loc>
+        <loc>https://webpack.js.org/glossary/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/glossary/index.html</loc>
+        <loc>https://webpack.js.org/get-started/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/index.html</loc>
@@ -136,10 +136,10 @@
         <loc>https://webpack.js.org/concepts/module-resolution/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/modules/index.html</loc>
+        <loc>https://webpack.js.org/concepts/output/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/output/index.html</loc>
+        <loc>https://webpack.js.org/concepts/modules/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/plugins/index.html</loc>
@@ -226,9 +226,6 @@
         <loc>https://webpack.js.org/development/release-process/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/install-webpack/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/get-started/why-webpack/index.html</loc>
     </url>
     <url>
@@ -278,6 +275,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/get-started/install-webpack/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/installation/index.html</loc>
@@ -370,9 +370,6 @@
         <loc>https://webpack.js.org/loaders/json-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/json5-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/less-loader/index.html</loc>
     </url>
     <url>
@@ -389,6 +386,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/polymer-webpack-loader/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/json5-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/postcss-loader/index.html</loc>
