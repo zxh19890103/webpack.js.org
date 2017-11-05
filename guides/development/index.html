@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/971c0ff564a0c1e15146.css" rel="stylesheet">
+      <link href="/8a08c4905e7c1b1df5c2.css" rel="stylesheet">
     
 
     <script>
@@ -199,11 +199,11 @@ Child html-webpack-plugin <span class="token keyword">for</span> <span class="to
 <p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x8FD0;&#x884C; <code>npm start</code>&#xFF0C;&#x5C31;&#x4F1A;&#x770B;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x9875;&#x9762;&#x3002;&#x5982;&#x679C;&#x73B0;&#x5728;&#x4FEE;&#x6539;&#x548C;&#x4FDD;&#x5B58;&#x4EFB;&#x610F;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;web &#x670D;&#x52A1;&#x5668;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x8BD5;&#x4E00;&#x4E0B;&#xFF01;</p>
 <p><code>webpack-dev-server</code> &#x5E26;&#x6709;&#x8BB8;&#x591A;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x9009;&#x9879;&#x3002;&#x8F6C;&#x5230;<a href="/configuration/dev-server">&#x76F8;&#x5173;&#x6587;&#x6863;</a>&#x4EE5;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x3002;</p>
 <blockquote class="tip"><div class="tip-content"> &#x73B0;&#x5728;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5C1D;&#x8BD5;<a href="/guides/hot-module-replacement">&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)</a>&#xFF01; </div></blockquote><h3 class="header"><a class="anchor" href="#-webpack-dev-middleware" id="-webpack-dev-middleware"></a><span class="text">&#x4F7F;&#x7528; webpack-dev-middleware</span><a class="icon-link" href="#-webpack-dev-middleware"></a></h3>
-<p><code>webpack-dev-middleware</code> is a wrapper that will emit files processed by webpack to a server. This is used in <code>webpack-dev-server</code> internally, however it&apos;s available as a separate package to allow more custom setups if desired. We&apos;ll take a look at an example that combines webpack-dev-middleware with an express server.</p>
-<p>Let&apos;s install <code>express</code> and <code>webpack-dev-middleware</code> so we can get started:</p>
+<p><code>webpack-dev-middleware</code> &#x662F;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x5BB9;&#x5668;(wrapper)&#xFF0C;&#x5B83;&#x5C06;&#x901A;&#x8FC7; webpack &#x5904;&#x7406;&#x540E;&#x7684;&#x6587;&#x4EF6;&#x53D1;&#x5E03;&#x5230;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;(server)&#x3002;&#x5728;&#x5185;&#x90E8; <code>webpack-dev-server</code> &#x5B83;&#x4F7F;&#x7528;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x5305;&#x6765;&#x63D0;&#x4F9B;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x66F4;&#x591A;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x8BBE;&#x7F6E;&#x6765;&#x5B9E;&#x73B0;&#x66F4;&#x591A;&#x9700;&#x6C42;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x4E00;&#x4E2A; webpack-dev-middleware &#x914D;&#x5408; express server &#x7684;&#x793A;&#x4F8B;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5B89;&#x88C5; <code>express</code> &#x548C; <code>webpack-dev-middleware</code>&#xFF1A;</p>
 <pre><code class="lang-bash">npm <span class="token function">install</span> --save-dev express webpack-dev-middleware
 </code></pre>
-<p>Now we need to make some adjustments to our webpack configuration file in order to make sure the middleware will function correctly:</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9; webpack &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x505A;&#x4E00;&#x4E9B;&#x8C03;&#x6574;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x4E2D;&#x95F4;&#x4EF6;(middleware)&#x529F;&#x80FD;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x542F;&#x7528;&#xFF1A;</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-diff">  const path = require(&apos;path&apos;);
   const HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);
@@ -228,7 +228,7 @@ Child html-webpack-plugin <span class="token keyword">for</span> <span class="to
     }
   };
 </code></pre>
-<p>The <code>publicPath</code> will be used within our server script as well in order to make sure files are served correctly on <code>http://localhost:3000</code>, the port number we&apos;ll specify later. The next step is setting up our custom <code>express</code> server:</p>
+<p><code>publicPath</code> &#x4E5F;&#x4F1A;&#x5728;&#x670D;&#x52A1;&#x5668;&#x811A;&#x672C;&#x7528;&#x5230;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x6587;&#x4EF6;&#x8D44;&#x6E90;&#x80FD;&#x591F;&#x5728; <code>http://localhost:3000</code> &#x4E0B;&#x6B63;&#x786E;&#x8BBF;&#x95EE;&#xFF0C;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x518D;&#x8BBE;&#x7F6E;&#x7AEF;&#x53E3;&#x53F7;&#x3002;&#x4E0B;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x8BBE;&#x7F6E;&#x6211;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x7684; <code>express</code> &#x670D;&#x52A1;&#xFF1A;</p>
 <p><strong>project</strong></p>
 <pre><code class="lang-diff">  webpack-demo
   |- package.json
@@ -260,7 +260,7 @@ app<span class="token punctuation">.</span><span class="token function">listen</
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;Example app listening on port 3000!\n&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Now add an npm script to make it a little easier to run the server:</p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; npm script&#xFF0C;&#x4EE5;&#x4F7F;&#x6211;&#x4EEC;&#x66F4;&#x65B9;&#x4FBF;&#x5730;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#xFF1A;</p>
 <p><strong>package.json</strong></p>
 <pre><code class="lang-diff">  {
     &quot;name&quot;: &quot;development&quot;,
@@ -291,7 +291,7 @@ app<span class="token punctuation">.</span><span class="token function">listen</
     }
   }
 </code></pre>
-<p>Now in your terminal run <code>npm run server</code>, it should give you an output similar to this:</p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x5728;&#x4F60;&#x7684;&#x7EC8;&#x7AEF;&#x6267;&#x884C; <code>npm run server</code>&#xFF0C;&#x5C06;&#x4F1A;&#x6709;&#x7C7B;&#x4F3C;&#x5982;&#x4E0B;&#x4FE1;&#x606F;&#x8F93;&#x51FA;&#xFF1A;</p>
 <pre><code class="lang-bash">Example app listening on port 3000<span class="token operator">!</span>
 webpack built 27b137af6d9d8668c373 <span class="token keyword">in</span> 1198ms
 Hash: 27b137af6d9d8668c373
@@ -315,8 +315,8 @@ Child html-webpack-plugin <span class="token keyword">for</span> <span class="to
        <span class="token punctuation">[</span>3<span class="token punctuation">]</span> <span class="token punctuation">(</span>webpack<span class="token punctuation">)</span>/buildin/module.js 517 bytes <span class="token punctuation">{</span>0<span class="token punctuation">}</span> <span class="token punctuation">[</span>built<span class="token punctuation">]</span>
 webpack: Compiled successfully.
 </code></pre>
-<p>Now fire up your browser and go to <code>http://localhost:3000</code>, you should see your webpack app running and functioning!</p>
-<blockquote class="tip"><div class="tip-content"> If you like to know more about how Hot Module Replacement works, we recommend you read the <a href="/guides/hot-module-replacement/">Hot Module Replacement</a> guide. </div></blockquote><h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x8C03;&#x6574;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;</span><a class="icon-link" href="#-"></a></h2>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230; <code>http://localhost:3000</code>&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x770B;&#x5230;&#x4F60;&#x7684;webpack &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5DF2;&#x7ECF;&#x8FD0;&#x884C;&#xFF01;</p>
+<blockquote class="tip"><div class="tip-content"> &#x5982;&#x679C;&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)&#x7684;&#x673A;&#x5236;&#xFF0C;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x4F60;&#x67E5;&#x770B;<a href="/guides/hot-module-replacement/">&#x6A21;&#x5757;&#x70ED;&#x66FF;&#x6362;(Hot Module Replacement)</a>&#x6307;&#x5357;&#x3002; </div></blockquote><h2 class="header"><a class="anchor" href="#-" id="-"></a><span class="text">&#x8C03;&#x6574;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x5668;</span><a class="icon-link" href="#-"></a></h2>
 <p>&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x7F16;&#x8BD1;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x65F6;&#x9047;&#x5230;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x3002;&#x67D0;&#x4E9B;&#x7F16;&#x8F91;&#x5668;&#x5177;&#x6709;&#x201C;&#x5B89;&#x5168;&#x5199;&#x5165;&#x201D;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x3002;</p>
 <p>&#x8981;&#x5728;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x4E2D;&#x7981;&#x7528;&#x6B64;&#x529F;&#x80FD;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x4EE5;&#x4E0B;&#x5217;&#x8868;&#xFF1A;</p>
 <ul>
