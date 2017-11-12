@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/fee22136e7996bae3e5d.css" rel="stylesheet">
+      <link href="/2d0ab7a9f88ec57576f6.css" rel="stylesheet">
     
 
     <script>
@@ -61,6 +61,7 @@
 </code></pre>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+<span class="token inserted">+ const webpack = require(&apos;webpack&apos;);</span>
 
   module.exports = {
     entry: &apos;./src/index.js&apos;,
@@ -71,7 +72,7 @@
 <span class="token inserted">+   },</span>
 <span class="token inserted">+   plugins: [</span>
 <span class="token inserted">+     new webpack.ProvidePlugin({</span>
-<span class="token inserted">+       lodash: &apos;lodash&apos;</span>
+<span class="token inserted">+       _: &apos;lodash&apos;</span>
 <span class="token inserted">+     })</span>
 <span class="token inserted">+   ]</span>
   };
@@ -98,6 +99,7 @@
 </code></pre>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+  const webpack = require(&apos;webpack&apos;);
 
   module.exports = {
     entry: &apos;./src/index.js&apos;,
@@ -107,7 +109,7 @@
     },
     plugins: [
       new webpack.ProvidePlugin({
-<span class="token deleted">-       lodash: &apos;lodash&apos;</span>
+<span class="token deleted">-       _: &apos;lodash&apos;</span>
 <span class="token inserted">+       join: [&apos;lodash&apos;, &apos;join&apos;]</span>
       })
     ]
@@ -132,6 +134,7 @@
 <p>This becomes a problem when the module is executed in a CommonJS context where <code>this</code> is equal to <code>module.exports</code>. In this case you can override <code>this</code> using the <a href="/loaders/imports-loader/"><code>imports-loader</code></a>:</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+  const webpack = require(&apos;webpack&apos;);
 
   module.exports = {
     entry: &apos;./src/index.js&apos;,
@@ -176,6 +179,7 @@
 <p>Now, while you&apos;d likely never do this in your own source code, you may encounter a dated library you&apos;d like to use that contains similar code to what&apos;s shown above. In this case, we can use <a href="/loaders/exports-loader/"><code>exports-loader</code></a>, to export that global variable as a normal module export. For instance, in order to export <code>file</code> as <code>file</code> and <code>helpers.parse</code> as <code>parse</code>:</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+  const webpack = require(&apos;webpack&apos;);
 
   module.exports = {
     entry: &apos;./src/index.js&apos;,
@@ -257,6 +261,7 @@
 </code></pre>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-diff">  const path = require(&apos;path&apos;);
+  const webpack = require(&apos;webpack&apos;);
 
   module.exports = {
 <span class="token deleted">-   entry: &apos;./src/index.js&apos;,</span>
@@ -354,7 +359,7 @@
 <blockquote>
 <p>&#x539F;&#x6587;&#xFF1A;<a href="https://webpack.js.org/guides/shimming/">https://webpack.js.org/guides/shimming/</a></p>
 </blockquote>
-</div><div><hr><h3>&#x8FDB;&#x4E00;&#x6B65;&#x9605;&#x8BFB;</h3><ul><li><a href="https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7#c665">Reward modern browser users script</a></li><li><a href="https://github.com/babel/babel-preset-env#usebuiltins">useBuiltIns in babel-preset-env</a></li></ul></div><div><hr><h3>&#x8D21;&#x732E;&#x4EBA;&#x5458;</h3><div class="contributors"><div class="contributors__list"><a class="contributor" href="https://github.com/jeremenichelli"><img src="https://github.com/jeremenichelli.png?size=90"><span class="contributor__name"> jeremenichelli</span></a><a class="contributor" href="https://github.com/jhnns"><img src="https://github.com/jhnns.png?size=90"><span class="contributor__name"> jhnns</span></a><a class="contributor" href="https://github.com/pksjce"><img src="https://github.com/pksjce.png?size=90"><span class="contributor__name"> pksjce</span></a><a class="contributor" href="https://github.com/simon04"><img src="https://github.com/simon04.png?size=90"><span class="contributor__name"> simon04</span></a></div></div></div><div class="interactive" id="src/components/Gitter/Gitter.jsx" data-props="{}"><span class="gitter"><div class="gitter__button js-gitter-toggle-chat-button" style="margin-bottom:0;"><i class="gitter__icon icon-gitter"></i></div></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/getting-started/" class="footer__link">&#x8D77;&#x6B65;</a><a href="/organization/" class="footer__link">&#x7EC4;&#x7EC7;</a><a href="/starter-kits/" class="footer__link">&#x914D;&#x5957;&#x5DE5;&#x5177;</a><a href="/comparison/" class="footer__link">&#x6BD4;&#x8F83;</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/6bc5d8cf78d442a984e70195db059b69.svg" alt="webpack icon"></a></section><section class="footer__right"><a href="/glossary/" class="footer__link">&#x6982;&#x5FF5;&#x672F;&#x8BED;</a><a href="/branding/" class="footer__link">&#x54C1;&#x724C;</a><a href="//gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">&#x66F4;&#x65B0;&#x65E5;&#x5FD7;</a><a href="/license" class="footer__link">&#x9075;&#x5FAA;&#x534F;&#x8BAE;</a><a href="" class="footer__link">&#x7CA4;ICP&#x5907;17008907&#x53F7;</a><a href="/license" class="footer__link footer__license"><img alt="Creative Commons License" src="/c983c925f14c5a308465ce5f912be111.svg"><img alt="Creative Commons License" src="/c440e4e11ad72daf1899ca0616ddd8b8.svg"></a></section></div></footer></div>
+</div><div><hr><h3>&#x8FDB;&#x4E00;&#x6B65;&#x9605;&#x8BFB;</h3><ul><li><a href="https://hackernoon.com/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7#c665">Reward modern browser users script</a></li><li><a href="https://github.com/babel/babel-preset-env#usebuiltins">useBuiltIns in babel-preset-env</a></li></ul></div><div><hr><h3>&#x8D21;&#x732E;&#x4EBA;&#x5458;</h3><div class="contributors"><div class="contributors__list"><a class="contributor" href="https://github.com/jeremenichelli"><img src="https://github.com/jeremenichelli.png?size=90"><span class="contributor__name"> jeremenichelli</span></a><a class="contributor" href="https://github.com/jhnns"><img src="https://github.com/jhnns.png?size=90"><span class="contributor__name"> jhnns</span></a><a class="contributor" href="https://github.com/pksjce"><img src="https://github.com/pksjce.png?size=90"><span class="contributor__name"> pksjce</span></a><a class="contributor" href="https://github.com/simon04"><img src="https://github.com/simon04.png?size=90"><span class="contributor__name"> simon04</span></a><a class="contributor" href="https://github.com/svyandun"><img src="https://github.com/svyandun.png?size=90"><span class="contributor__name"> svyandun</span></a></div></div></div><div class="interactive" id="src/components/Gitter/Gitter.jsx" data-props="{}"><span class="gitter"><div class="gitter__button js-gitter-toggle-chat-button" style="margin-bottom:0;"><i class="gitter__icon icon-gitter"></i></div></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/getting-started/" class="footer__link">&#x8D77;&#x6B65;</a><a href="/organization/" class="footer__link">&#x7EC4;&#x7EC7;</a><a href="/starter-kits/" class="footer__link">&#x914D;&#x5957;&#x5DE5;&#x5177;</a><a href="/comparison/" class="footer__link">&#x6BD4;&#x8F83;</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/6bc5d8cf78d442a984e70195db059b69.svg" alt="webpack icon"></a></section><section class="footer__right"><a href="/glossary/" class="footer__link">&#x6982;&#x5FF5;&#x672F;&#x8BED;</a><a href="/branding/" class="footer__link">&#x54C1;&#x724C;</a><a href="//gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">&#x66F4;&#x65B0;&#x65E5;&#x5FD7;</a><a href="/license" class="footer__link">&#x9075;&#x5FAA;&#x534F;&#x8BAE;</a><a href="" class="footer__link">&#x7CA4;ICP&#x5907;17008907&#x53F7;</a><a href="/license" class="footer__link footer__license"><img alt="Creative Commons License" src="/c983c925f14c5a308465ce5f912be111.svg"><img alt="Creative Commons License" src="/c440e4e11ad72daf1899ca0616ddd8b8.svg"></a></section></div></footer></div>
 
     
       <script src="/c99a162fc6760b12b11bde7ed4414b32.js"></script>
