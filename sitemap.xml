@@ -7,9 +7,6 @@
         <loc>https://webpack.js.org/about/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/analyze/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api/index.html</loc>
     </url>
     <url>
@@ -238,6 +235,9 @@
         <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/build-performance/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/caching/index.html</loc>
     </url>
     <url>
@@ -248,9 +248,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-css/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/build-performance/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
