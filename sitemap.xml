@@ -253,10 +253,10 @@
         <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/code-splitting-require/index.html</loc>
+        <loc>https://webpack.js.org/guides/code-splitting-libraries/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/code-splitting-libraries/index.html</loc>
+        <loc>https://webpack.js.org/guides/code-splitting-require/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/dependency-management/index.html</loc>
