@@ -97,10 +97,10 @@
         <loc>https://webpack.js.org/api/passing-a-config/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/index.html</loc>
+        <loc>https://webpack.js.org/api/resolver/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/resolver/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/stats/index.html</loc>
@@ -133,10 +133,10 @@
         <loc>https://webpack.js.org/concepts/module-resolution/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/modules/index.html</loc>
+        <loc>https://webpack.js.org/concepts/output/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/output/index.html</loc>
+        <loc>https://webpack.js.org/concepts/modules/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/plugins/index.html</loc>
@@ -232,9 +232,6 @@
         <loc>https://webpack.js.org/guides/asset-management/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/build-performance/index.html</loc>
     </url>
     <url>
@@ -242,6 +239,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-async/index.html</loc>
@@ -394,10 +394,10 @@
         <loc>https://webpack.js.org/loaders/postcss-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/raw-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/react-proxy-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/react-proxy-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/raw-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/restyle-loader/index.html</loc>
