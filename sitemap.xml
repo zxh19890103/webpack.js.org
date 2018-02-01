@@ -37,13 +37,13 @@
         <loc>https://webpack.js.org/guides/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/license/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/organization/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/license/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/index.html</loc>
@@ -64,10 +64,10 @@
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
+        <loc>https://webpack.js.org/api/compilation/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/compilation/index.html</loc>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/compiler/index.html</loc>
@@ -91,10 +91,10 @@
         <loc>https://webpack.js.org/api/node/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/passing-a-config/index.html</loc>
+        <loc>https://webpack.js.org/api/parser/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/parser/index.html</loc>
+        <loc>https://webpack.js.org/api/passing-a-config/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/index.html</loc>
