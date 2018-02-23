@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "server": "python -m SimpleHTTPServer 10000"
-  }
-}
