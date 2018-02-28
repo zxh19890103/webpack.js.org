@@ -46,6 +46,9 @@
         <loc>https://webpack.js.org/organization/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/pluginsapi/index.html</loc>
     </url>
     <url>
@@ -59,9 +62,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/cli/index.html</loc>
@@ -250,13 +250,13 @@
         <loc>https://webpack.js.org/guides/code-splitting-css/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/code-splitting-libraries/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-require/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/dependency-management/index.html</loc>
@@ -436,15 +436,6 @@
         <loc>https://webpack.js.org/loaders/yaml-frontmatter-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/pluginsapi/compiler/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/aggressive-splitting-plugin/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin/index.html</loc>
     </url>
     <url>
@@ -467,6 +458,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/copy-webpack-plugin/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/aggressive-splitting-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/define-plugin/index.html</loc>
@@ -539,6 +533,12 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/zopfli-webpack-plugin/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/pluginsapi/compiler/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
