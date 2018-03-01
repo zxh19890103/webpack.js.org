@@ -148,6 +148,9 @@
         <loc>https://webpack.js.org/configuration/configuration-languages/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/configuration/configuration-types/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/dev-server/index.html</loc>
     </url>
     <url>
@@ -155,9 +158,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/entry-context/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/configuration/configuration-types/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/externals/index.html</loc>
