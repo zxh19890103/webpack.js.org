@@ -112,10 +112,10 @@
         <loc>https://webpack.js.org/api/template/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/dependency-graph/index.html</loc>
+        <loc>https://webpack.js.org/concepts/configuration/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/configuration/index.html</loc>
+        <loc>https://webpack.js.org/concepts/dependency-graph/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/entry-points/index.html</loc>
@@ -223,10 +223,10 @@
         <loc>https://webpack.js.org/development/release-process/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/why-webpack/index.html</loc>
+        <loc>https://webpack.js.org/get-started/install-webpack/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/install-webpack/index.html</loc>
+        <loc>https://webpack.js.org/get-started/why-webpack/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/asset-management/index.html</loc>
@@ -391,10 +391,10 @@
         <loc>https://webpack.js.org/loaders/polymer-webpack-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/raw-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/postcss-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/postcss-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/raw-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/react-proxy-loader/index.html</loc>
