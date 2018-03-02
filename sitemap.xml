@@ -238,10 +238,10 @@
         <loc>https://webpack.js.org/guides/build-performance/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/caching/index.html</loc>
+        <loc>https://webpack.js.org/guides/code-splitting/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/code-splitting/index.html</loc>
+        <loc>https://webpack.js.org/guides/caching/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-async/index.html</loc>
@@ -541,10 +541,10 @@
         <loc>https://webpack.js.org/plugins/zopfli-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
