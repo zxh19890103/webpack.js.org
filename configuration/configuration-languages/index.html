@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/d7822d53f56b9c4ff12b.css" rel="stylesheet">
+      <link href="/a0688528a4d9cfc7b03e.css" rel="stylesheet">
     
 
     <script>
@@ -50,17 +50,17 @@
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> config<span class="token punctuation">;</span>
 </code></pre>
-<p>Note that you&apos;ll also need to check your <code>tsconfig.json</code> file. If the module in <code>compilerOptions</code> in <code>tsconfig.json</code> is <code>commonjs</code>, the setting is complete, else webpack will fail with an error. This occurs because <code>ts-node</code> does not support any module syntax other than <code>commonjs</code>.</p>
-<p>There are two solutions to this issue:</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x8FD8;&#x9700;&#x8981;&#x6838;&#x5BF9; <code>tsconfig.json</code> &#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C; <code>tsconfig.json</code> &#x4E2D;&#x7684; <code>compilerOptions</code> &#x4E2D;&#x7684; module &#x5B57;&#x6BB5;&#x662F; <code>commonjs</code> &#xFF0C;&#x5219;&#x914D;&#x7F6E;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x5426;&#x5219; webpack &#x5C06;&#x56E0;&#x4E3A;&#x9519;&#x8BEF;&#x800C;&#x6784;&#x5EFA;&#x5931;&#x8D25;&#x3002;&#x53D1;&#x751F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x662F;&#x56E0;&#x4E3A; <code>ts-node</code> &#x4E0D;&#x652F;&#x6301; <code>commonjs</code> &#x4EE5;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x6A21;&#x5757;&#x8BED;&#x6CD5;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x6709;&#x4E24;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;</p>
 <ul>
-<li>Modify <code>tsconfig.json</code>.</li>
-<li>Install <code>tsconfig-paths</code>.</li>
+<li>&#x4FEE;&#x6539; <code>tsconfig.json</code>&#x3002;</li>
+<li>&#x5B89;&#x88C5; <code>tsconfig-paths</code>&#x3002;</li>
 </ul>
-<p>The <strong>first option</strong> is to open your <code>tsconfig.json</code> file and look for <code>compilerOptions</code>. Set <code>target</code> to <code>&quot;ES5&quot;</code> and <code>module</code> to <code>&quot;CommonJS&quot;</code> (or completely remove the <code>module</code> option).</p>
-<p>The <strong>second option</strong> is to install the <code>tsconfig-paths</code> package:</p>
+<p>_<em>&#x7B2C;&#x4E00;&#x4E2A;&#x9009;&#x9879;</em>&#x662F;&#x6307;&#xFF0C;&#x6253;&#x5F00;&#x4F60;&#x7684; <code>tsconfig.json</code> &#x6587;&#x4EF6;&#x5E76;&#x67E5;&#x627E; <code>compilerOptions</code>&#x3002;&#x5C06; <code>target</code> &#x8BBE;&#x7F6E;&#x4E3A; <code>&quot;ES5&quot;</code>&#xFF0C;&#x4EE5;&#x53CA;&#x5C06; <code>module</code> &#x8BBE;&#x7F6E;&#x4E3A; <code>&quot;CommonJS&quot;</code>&#xFF08;&#x6216;&#x8005;&#x5B8C;&#x5168;&#x79FB;&#x9664; <code>module</code> &#x9009;&#x9879;&#xFF09;&#x3002;</p>
+<p>_<em>&#x7B2C;&#x4E8C;&#x4E2A;&#x9009;&#x9879;</em>&#x662F;&#x6307;&#xFF0C;&#x5B89;&#x88C5; <code>tsconfig-paths</code> &#x5305;&#xFF1A;</p>
 <pre><code class="lang-bash">npm <span class="token function">install</span> --save-dev tsconfig-paths
 </code></pre>
-<p>And create a separate TypeScript configuration specifically for your webpack configs:</p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x4E3A;&#x4F60;&#x7684; webpack &#x914D;&#x7F6E;&#xFF0C;&#x4E13;&#x95E8;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; TypeScript &#x914D;&#x7F6E;&#xFF1A;</p>
 <p><strong>tsconfig-for-webpack-config.json</strong></p>
 <pre><code class="lang-json"><span class="token punctuation">{</span>
   <span class="token property">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -69,7 +69,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<blockquote class="tip"><div class="tip-content"> <code>ts-node</code> can resolve a <code>tsconfig.json</code> file using the environment variable provided by <code>tsconfig-path</code>. </div></blockquote><p>Then set the environment variable <code>process.env.TS_NODE_PROJECT</code> provided by <code>tsconfig-path</code> like so:</p>
+<blockquote class="tip"><div class="tip-content"> <code>ts-node</code> &#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>tsconfig-path</code> &#x63D0;&#x4F9B;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x6765;&#x89E3;&#x6790; <code>tsconfig.json</code> &#x6587;&#x4EF6;&#x3002; </div></blockquote><p>&#x7136;&#x540E;&#xFF0C;&#x8BBE;&#x7F6E; <code>tsconfig-path</code> &#x63D0;&#x4F9B;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF; <code>process.env.TS_NODE_PROJECT</code>&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
 <p><strong>package.json</strong></p>
 <pre><code class="lang-json"><span class="token punctuation">{</span>
   <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
