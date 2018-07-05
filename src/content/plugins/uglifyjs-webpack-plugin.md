@@ -6,7 +6,7 @@ repo: https://github.com/webpack-contrib/uglifyjs-webpack-plugin
 ---
 This plugin uses <a href="https://github.com/mishoo/UglifyJS2/tree/harmony">UglifyJS v3 </a><a href="https://npmjs.com/package/uglify-es">(`uglify-es`)</a> to minify your JavaScript
 
-> ℹ️  `webpack =< v3.0.0` currently contains [`v0.4.6`](https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/version-0.4) of this plugin under `webpack.optimize.UglifyJsPlugin` as an alias. For usage of the latest version (`v1.0.0`), please follow the instructions below. Aliasing `v1.0.0` as `webpack.optimize.UglifyJsPlugin` is scheduled for `webpack v4.0.0`
+> ℹ️  `webpack < v4.0.0` currently contains [`v0.4.6`](https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/version-0.4) of this plugin under `webpack.optimize.UglifyJsPlugin` as an alias. For usage of the latest version (`v1.0.0`), please follow the instructions below. Aliasing `v1.0.0` as `webpack.optimize.UglifyJsPlugin` is scheduled for `webpack v4.0.0`
 
 ## Install
 
@@ -21,9 +21,12 @@ npm i -D uglifyjs-webpack-plugin
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
-  plugins: [
-    new UglifyJsPlugin()
-  ]
+  //...
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin()
+    ]
+  }
 }
 ```
 
@@ -35,6 +38,7 @@ module.exports = {
 |**`include`**|`{RegExp\|Array<RegExp>}`|`undefined`|Files to `include`|
 |**`exclude`**|`{RegExp\|Array<RegExp>}`|`undefined`|Files to `exclude`|
 |**`cache`**|`{Boolean\|String}`|`false`|Enable file caching|
+|**`cacheKeys`**|`{Function(defaultCacheKeys, file) -> {Object}}`|`defaultCacheKeys => defaultCacheKeys`|Allows you to override default cache keys|
 |**`parallel`**|`{Boolean\|Number}`|`false`|Use multi-process parallel running to improve the build speed|
 |**`sourceMap`**|`{Boolean}`|`false`|Use source maps to map error message locations to modules (This slows down the compilation) ⚠️ **`cheap-source-map` options don't work with this plugin**|
 |**`uglifyOptions`**|`{Object}`|[`{...defaults}`](https://github.com/webpack-contrib/uglifyjs-webpack-plugin/tree/master#uglifyoptions)|`uglify` [Options](https://github.com/mishoo/UglifyJS2/tree/harmony#minify-options)|
@@ -103,6 +107,35 @@ Default path to cache directory: `node_modules/.cache/uglifyjs-webpack-plugin`.
 
 Path to cache directory.
 
+### `cacheKeys`
+
+**webpack.config.js**
+```js
+[
+  new UglifyJsPlugin({
+    cache: true,
+    cacheKeys: (defaultCacheKeys, file) => {
+      defaultCacheKeys.myCacheKey = 'myCacheKeyValue';
+      
+      return defaultCacheKeys;
+    },
+  })
+]
+```
+
+Allows you to override default cache keys.
+
+Default keys:
+```js
+{
+  'uglify-es': versions.uglify, // uglify version
+  'uglifyjs-webpack-plugin': versions.plugin, // plugin version
+  'uglifyjs-webpack-plugin-options': this.options, // plugin options
+  path: compiler.outputPath ? `${compiler.outputPath}/${file}` : file, // asset path
+  hash: crypto.createHash('md4').update(input).digest('hex'), // source file hash
+}
+```
+
 ### `parallel`
 
 #### `{Boolean}`
@@ -155,8 +188,8 @@ Number of concurrent runs.
 |**`warnings`**|`{Boolean}`|`false`|Display Warnings|
 |**[`parse`](https://github.com/mishoo/UglifyJS2/tree/harmony#parse-options)**|`{Object}`|`{}`|Additional Parse Options|
 |**[`compress`](https://github.com/mishoo/UglifyJS2/tree/harmony#compress-options)**|`{Boolean\|Object}`|`true`|Additional Compress Options|
-|**[`mangle`](https://github.com/mishoo/UglifyJS2/tree/harmony#mangle-options)**|`{Boolean\|Object}`|`true`|Enable Name Mangling (See [Mangle Properties](https://github.com/mishoo/UglifyJS2/tree/harmony#mangle-properties-options) for advanced setups, use with ⚠️)|
-|**[`output`](https://github.com/mishoo/UglifyJS2/tree/harmony#output-options)**|`{Object}`|`{}`|Additional Output Options (The defaults are optimized for best compression)|
+|**[`mangle`](https://github.com/mishoo/UglifyJS2/tree/harmony#mangle-options)**|`{Boolean\|Object}`|`{inline: false}`|Enable Name Mangling (See [Mangle Properties](https://github.com/mishoo/UglifyJS2/tree/harmony#mangle-properties-options) for advanced setups, use with ⚠️)|
+|**[`output`](https://github.com/mishoo/UglifyJS2/tree/harmony#output-options)**|`{Object}`|`{comments: extractComments ? false : /^\**!\|@preserve\|@license\|@cc_on/,}`|Additional Output Options (The defaults are optimized for best compression)|
 |**`toplevel`**|`{Boolean}`|`false`|Enable top level variable and function name mangling and to drop unused variables and functions|
 |**`nameCache`**|`{Object}`|`null`|Enable cache of mangled variable and property names across multiple invocations|
 |**`ie8`**|`{Boolean}`|`false`|Enable IE8 Support|
@@ -278,8 +311,8 @@ All comments that match the given expression (resp. are evaluated to `true` by t
 [deps]: https://david-dm.org/webpack-contrib/uglifyjs-webpack-plugin.svg
 [deps-url]: https://david-dm.org/webpack-contrib/uglifyjs-webpack-plugin
 
-[test]: https://secure.travis-ci.org/webpack-contrib/uglifyjs-webpack-plugin.svg
-[test-url]: http://travis-ci.org/webpack-contrib/uglifyjs-webpack-plugin
+[test]: 	https://img.shields.io/circleci/project/github/webpack-contrib/uglifyjs-webpack-plugin.svg
+[test-url]: https://circleci.com/gh/webpack-contrib/uglifyjs-webpack-plugin
 
 [cover]: https://codecov.io/gh/webpack-contrib/uglifyjs-webpack-plugin/branch/master/graph/badge.svg
 [cover-url]: https://codecov.io/gh/webpack-contrib/uglifyjs-webpack-plugin
